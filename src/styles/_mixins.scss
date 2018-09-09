@@ -1,0 +1,47 @@
+@mixin mobile {
+  @media only screen and (max-width: 1023px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (min-width: 1024px) and (max-width: 1550px){
+    @content;
+  }
+}
+@mixin desktop{
+  @media screen and (min-width: 1551px){
+    @content;
+  }
+}
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+@mixin bgGrad($deg, $color1, $color2) {
+  background: $color1;
+  background: -webkit-linear-gradient($deg, $color1, $color2);
+  background: -o-linear-gradient($deg, $color1, $color2);
+  background: -moz-linear-gradient($deg, $color1, $color2);
+  background: linear-gradient($deg, $color1, $color2);
+}
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

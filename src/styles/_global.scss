@@ -1,0 +1,14 @@
+@import "../styles/mixins";
+
+$bg: #fefefe;
+$text: #444444;
+$key1: #6051de;
+$key2: #58adf4;
+
+.gradientText{
+  @include bgGrad(90deg, $key1, $key2)
+  font-weight: 400;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}

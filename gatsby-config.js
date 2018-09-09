@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Su Li Portfolio - Front End Developer & UX Designer',
+    title: 'Su Li Portfolio — Front End Developer & UX Designer',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

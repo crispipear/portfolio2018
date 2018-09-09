@@ -1,18 +1,45 @@
-.container {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-img{
-  opacity: 0;
-}
-canvas {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
+@import "../../styles/global";
+
+
+.landpage{
+  .container{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    div:first-child{
+      width: 80%;
+    }
+    div:last-child{
+      width: 20%;
+    }
+  }
+  h1{
+    font-weight: 300;
+    font-size: 2.75rem;
+  }
+  h3{
+    font-size: 1.35rem;
+    &:nth-child(3){
+      margin-top: 5%;
+    }
+  }
+  span, a{
+    font-family: 'Inconsolata';
+    @extend .gradientText
+  }
+  a{
+    font-weight: bold;
+    font-size: 1.35rem;
+  }
+  .seeWork{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    img{
+      width: 40px;
+      transform: rotate(-90deg);
+    }
+  }
 }

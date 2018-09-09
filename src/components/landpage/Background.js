@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-import bgImg from './desktop.png'
-import './landpage.scss'
+import bgImgDesktop from './desktop.png'
+import bgImgLaptop from './laptop.png'
+import bgImgMobile from './mobile.png'
+import './background.scss'
 
 export default class Background extends Component {
   constructor(){
     super()
     this.state = {
+      renderCanvas: true,
       windowWidth: window.innerWidth,
       windowHeight: window.innerHeight,
       center: {
@@ -25,15 +28,29 @@ export default class Background extends Component {
     document.addEventListener('touchstart', this._handleEvents, false)
     document.addEventListener('touchmove', this._handleEvents, false)
     document.addEventListener('touchend', this._handleEvents, false)
-
+    window.addEventListener('resize', this._handleWindowResize, false)
   }
   componentWillUnmount(){
     document.removeEventListener('mousemove', this._handleEvents, false)
     document.removeEventListener('touchstart', this._handleEvents, false)
     document.removeEventListener('touchmove', this._handleEvents, false)
     document.removeEventListener('touchend', this._handleEvents, false)
+    window.removeEventListener('resize', this._handleWindowResize, false)
   }
 
+  _handleWindowResize = () => {
+    //TODO: need to make background dynamic based on window resize
+
+
+    // this.setState({
+    //   windowWidth: window.innerWidth,
+    //   windowHeight: window.innerHeight,
+    //   center: {
+    //     x: window.innerWidt/2,
+    //     y: window.innerHeight/2
+    //   }
+    // }, this._drawBackground())
+  }
   _handleEvents = e => {
     let x,y
     x = y = 0
@@ -67,14 +84,8 @@ export default class Background extends Component {
     var interactive = this.refs.interactive.getContext('2d'),
       reference = this.refs.reference.getContext('2d'),
       image = this.refs.backgroundImage,
-      logoDimension = {
-        x: image.width,
-        y: image.height
-      },
-      logoLocation = {
-        x: this.state.center.x - logoDimension.x / 2,
-        y: this.state.center.y - logoDimension.y / 2
-      },
+      logoDimension,
+      logoLocation,
       particleArr = [],
       particleAttr = {
         friction:1,
@@ -83,6 +94,7 @@ export default class Background extends Component {
         size: 1.25,
         color: '#5888f4'
       }
+
     function Particle(x, y) {
       this.x = this.originX = x;
       this.y = this.originY = y;
@@ -109,7 +121,7 @@ export default class Background extends Component {
     }
 
     const init = () => {
-      reference.drawImage(image, this.state.center.x/2, 0)
+      reference.drawImage(image, logoLocation.x*1.5, logoLocation.y)
       var pixels = reference.getImageData(0, 0, this.state.windowWidth, this.state.windowHeight).data
       var index
       for (var y = 0; y < this.state.windowHeight; y += particleAttr.spacing) {
@@ -144,16 +156,38 @@ export default class Background extends Component {
       requestAnimationFrame(animate)
     }
 
-    image.onload = () => {
+    const load = () => {
+      interactive.clearRect(0, 0, this.state.windowWidth, this.state.windowHeight)
+      reference.clearRect(0, 0, this.state.windowWidth, this.state.windowHeight)
+      logoDimension = {
+        x: image.width,
+        y: image.height
+      }
+      logoLocation = {
+        x: this.state.center.x - logoDimension.x / 2,
+        y: this.state.center.y - logoDimension.y / 2
+      }
       init()
       animate()
+    }
+
+    image.onload = () => {
+      load()
     }
   }
 
   render(){
+    let image
+    if (this.state.windowWidth>1550){
+      image = <img ref='backgroundImage' src={bgImgDesktop}/>
+    }else if(this.state.windowWidth>1024){
+      image = <img ref='backgroundImage' src={bgImgLaptop}/>
+    }else if(this.state.windowWidth<=1023){
+      image = <img ref='backgroundImage' src={bgImgMobile}/>
+    }
     return(
-      <div className='container'>
-        <img ref='backgroundImage' src={bgImg}/>
+      <div className='bgContainer'>
+        {image}
         <canvas ref='interactive' width={this.state.windowWidth} height={this.state.windowHeight}/>
         <canvas ref='reference' width={this.state.windowWidth} height={this.state.windowHeight}/>
       </div>

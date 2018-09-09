@@ -1,3 +1,83 @@
+@import "../styles/global";
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+*{
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: $text;
+  letter-spacing: 0.025rem;
+  cursor: default;
+}
+a{
+  font-family: 'Inconsolata';
+  cursor: pointer;
+  letter-spacing: 0.1rem!important;
+  text-decoration: none;
+  &:visited{
+    color: inherit;
+  }
+}
 body{
+  border-image: linear-gradient(to bottom, $key1 0%, $key2 100%);
+  border-image-slice: 1;
+  border-style: solid;
+  border-width: 20px;
   margin: 0%;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #9294a3
+}
+section{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@include laptop {
+  .container {
+    max-width: 960px!important;
+  }
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  margin: 1.5% auto;
+}
+
+.footer{
+  height: 12.5vh;
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
+  span, span a{
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.075rem;
+  }
+  span a{
+    margin: 0% 7.5px;
+    transition: opacity 0.25s;
+    @extend .gradientText;
+    font-weight: bold;
+    &:hover{
+      opacity: 0.5;
+    }
+  }
 }
