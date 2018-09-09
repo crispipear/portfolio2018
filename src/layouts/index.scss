@@ -5,7 +5,7 @@
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: $text;
-  letter-spacing: 0.025rem;
+  letter-spacing: 0.05rem;
   cursor: default;
 }
 a{
@@ -18,10 +18,10 @@ a{
   }
 }
 body{
-  border-image: linear-gradient(to bottom, $key1 0%, $key2 100%);
+  border-image: linear-gradient(to top, $key1 0%, $key2 100%);
   border-image-slice: 1;
   border-style: solid;
-  border-width: 20px;
+  border-width: 25px;
   margin: 0%;
   overflow-x: hidden;
 }
@@ -46,7 +46,7 @@ section{
 .container{
   position: relative;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1300px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -61,6 +61,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .footer{
+  margin-top: 5%;
   height: 12.5vh;
   .container{
     display: flex;

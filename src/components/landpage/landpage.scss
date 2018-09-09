@@ -1,6 +1,5 @@
 @import "../../styles/global";
 
-
 .landpage{
   .container{
     display: flex;
@@ -31,6 +30,7 @@
   a{
     font-weight: bold;
     font-size: 1.35rem;
+    @extend .underline
   }
   .seeWork{
     display: flex;

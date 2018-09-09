@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 export default class Content extends Component {
   render(){
     return(
-      <section className='work'>
+      <section id="work" className='work'>
         <div className='container'>
           <h1>{"Hey there, I'm Su"}</h1>
           <h1><span>Front End Developer</span> and <span>UX Designer</span></h1>

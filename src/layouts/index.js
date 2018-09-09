@@ -4,7 +4,9 @@ import Helmet from 'react-helmet'
 
 import './index.scss'
 import favicon from '../../static/favicon.ico'
-import Footer from '../components/footer/Footer'
+import Footer from '../components/Footer'
+import Menu from '../components/menu/Menu'
+
 const scrollLib = require('really-smooth-scroll')
 scrollLib.shim()
 scrollLib.config({
@@ -25,6 +27,7 @@ const Layout = ({ children, data }) => (
         { rel: 'icon', href: favicon}
       ]}
     />
+    <Menu/>
     {children()}
     <Footer/>
   </div>

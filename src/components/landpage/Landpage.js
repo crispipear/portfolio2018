@@ -2,7 +2,7 @@ import React from 'react'
 import './landpage.scss'
 import DownIcon from '../../../static/back.svg'
 const Content = ({scroll}) => (
-  <section className='landpage'>
+  <section id="home" className='landpage'>
     <div className='container'>
       <div>
         <h1>{"Hey there, I'm Su"}</h1>
