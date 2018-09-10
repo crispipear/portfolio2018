@@ -1,7 +1,62 @@
 @import "../../styles/global";
 
 .work{
-
-  // background: url('../../data/clinicplus/thumbnail.png') no-repeat center;
-  // background-size: cover;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  .proj-div{
+    margin: 20% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      .proj-info{
+        text-align: right;
+      }
+    }
+    .proj-thumbnail{
+      width: 57.5%;
+      background-size: cover;
+      height: 55vh;
+      @include box-shadow(5px, 7.5px, 25px, rgba($text, 0.2), false);
+      @extend .frame;
+    }
+    .proj-info{
+      width: 35%;
+      height: 55vh;
+      h2{
+        font-size: 3rem;
+        letter-spacing: 0.15rem;
+        @extend .gradientText;
+      }
+      p{
+        &:nth-child(2){
+          color: rgba($text, 0.6);
+          font-family: 'Inconsolata';
+        }
+        margin-top: 5%;
+        font-size: 1.15rem;
+        line-height: 2rem;
+      }
+      a{
+        font-weight: bold;
+        margin-top: 7.5%;
+        padding: 3.5%;
+        @extend .button;
+      }
+    }
+    &:hover .proj-thumbnail{
+      &:before{
+        left: -30px;
+        bottom: -30px;
+      }
+      &:after{
+        right: -30px;
+        top: -30px;
+      }
+    }
+  }
 }

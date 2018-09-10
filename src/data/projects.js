@@ -8,7 +8,7 @@ export default [
    {
      "name": "Waves",
      "type": "mobile application prototype, public installation",
-     "des": "Public installation integrated with mobile app that brings public awareness to stress.",
+     "des": "Public installation integrated with mobile app bringing awareness to stress.",
      "path": "waves"
    },
    {

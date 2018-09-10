@@ -97,8 +97,8 @@ $key2: #58adf4;
     border-style: solid;
     border-width: 2px;
     position: absolute;
-    left: -15px;
-    bottom: -15px;
+    left: -20px;
+    bottom: -20px;
   }
   &:after{
     content: "";
@@ -109,18 +109,18 @@ $key2: #58adf4;
     border-style: solid;
     border-width: 1.5px;
     position: absolute;
-    right: -15px;
-    top: -15px;
+    right: -20px;
+    top: -20px;
     z-index: -1;
   }
   &:hover{
     &:before{
-      left: -25px;
-      bottom: -25px;
+      left: -30px;
+      bottom: -30px;
     }
     &:after{
-      right: -25px;
-      top: -25px;
+      right: -30px;
+      top: -30px;
     }
   }
 }

@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import ProjectsData from '../data/projects'
 import Background from '../components/background/Background'
 import LandPage from '../components/landpage/LandPage'
 import Work from '../components/landpage/Work'
