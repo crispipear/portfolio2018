@@ -70,6 +70,7 @@
     p{margin-bottom: 5%}
     .img{
       img{
+        @include box-shadow(5px, 7.5px, 15px, rgba($text, 0.15), false);
         max-width: 100%;
       }
       margin-bottom: 17.5%;

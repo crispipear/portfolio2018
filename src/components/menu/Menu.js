@@ -1,18 +1,17 @@
 import React, {Component} from 'react'
 import './menu.scss'
-import { HashLink as Link } from 'react-router-hash-link'
+import Link from 'gatsby-link'
 
-export default class Content extends Component {
-  constructor(){
-    super()
-    this.state = {
-      active: false
-    }
+
+export default class Menu extends Component {
+  state = {
+    active: false
   }
-  _closeMenu = () => {
+  _clickLink = () => {
     this.setState({
       active: false
     })
+    window.scrollTo(0, 0)
   }
   _toggleMenu = () => {
     this.setState({
@@ -24,9 +23,8 @@ export default class Content extends Component {
       <nav className={this.state.active?'open-menu':'close-menu'}>
         <div onClick={this._toggleMenu} className="burger"><span></span><span></span><span></span></div>
         <div className="menu">
-          <Link smooth to="/#home" onClick={this._closeMenu}>HOME</Link>
-          <Link smooth to="/#work" onClick={this._closeMenu}>WORK</Link>
-          <Link smooth to="/#about" onClick={this._closeMenu}>ABOUT</Link>
+          <Link to="/" onClick={this._clickLink}>HOME</Link>
+          <Link to="/about" onClick={this._clickLink}>ABOUT</Link>
         </div>
       </nav>
     )

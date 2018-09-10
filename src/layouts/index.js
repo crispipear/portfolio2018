@@ -13,6 +13,7 @@ scrollLib.config({
   mousewheelSensitivity: 7.5,
   keydownSensitivity: 7.5
 })
+
 const Layout = ({ children, data }) => (
   <div>
     <Helmet

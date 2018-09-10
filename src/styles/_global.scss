@@ -1,7 +1,7 @@
 @import "../styles/mixins";
 
 $bg: #fefefe;
-$text: #444444;
+$text: #2d2d2d;
 $key1: #6051de;
 $key2: #58adf4;
 
@@ -13,6 +13,56 @@ $key2: #58adf4;
   display: inline-block;
 }
 
+.button{
+  @extend .gradientText;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.35s;
+  padding: 5% 7.5%;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, $key1, $key2);
+  -webkit-border-image: -webkit-linear-gradient(left, $key1, $key2);
+  border-image-slice: 1;
+  -webkit-border-image-slice: 1;
+  min-width: 30%;
+  text-align: center;
+  &:after{
+    transition: all 0.5s;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    @include bgGrad(90deg, $key1, $key2);
+    transform: translateY(-100%)
+  }
+  &:hover{
+    animation: .5s ease-in-out flashText forwards;
+    &:after{
+      animation: .5s ease-in-out flash forwards
+    }
+  }
+}
+
+
+@include keyframes (flashText) {
+  50%{
+    -webkit-text-fill-color: $bg;
+  }
+}
+@include keyframes (flash) {
+  0%{
+    transform: translateY(-100%)
+  }
+  50%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(100%)
+  }
+}
 .underline{
   display: inline-block;
   position: relative;
@@ -33,7 +83,6 @@ $key2: #58adf4;
     left: 0;
   }
 }
-
 .frame{
   position: relative;
   &:before,&:after{
@@ -43,7 +92,10 @@ $key2: #58adf4;
     content: "";
     width: 100%;
     height: 100%;
-    border: 1px solid $key1;
+    border-image: linear-gradient(to top, $key1 0%, $key2 100%);
+    border-image-slice: 1;
+    border-style: solid;
+    border-width: 2px;
     position: absolute;
     left: -15px;
     bottom: -15px;
@@ -52,10 +104,14 @@ $key2: #58adf4;
     content: "";
     width: 100%;
     height: 100%;
-    border: 1px solid $key2;
+    border-image: linear-gradient(to bottom, $key1 0%, $key2 100%);
+    border-image-slice: 1;
+    border-style: solid;
+    border-width: 1.5px;
     position: absolute;
     right: -15px;
     top: -15px;
+    z-index: -1;
   }
   &:hover{
     &:before{

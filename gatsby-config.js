@@ -4,6 +4,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass'
+    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 750
+      }
+    }
   ]
 }

@@ -1,18 +1,22 @@
 @import "../../styles/global";
 
-.landpage{
-  .container{
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: space-between;
-    div:first-child{
-      width: 80%;
-    }
-    div:last-child{
-      width: 20%;
-    }
+@keyframes scrollAnimation{
+  0%{
+    background: $key1;
+    transform: translateY(0px);
   }
+  50%{
+    background: $key2;
+    transform: translateY(15px);
+  }
+  100%{
+    background: $key1;
+    transform: translateY(0px);
+  }
+}
+
+.landpage{
+  position: relative;
   h1{
     font-weight: 300;
     font-size: 2.75rem;
@@ -23,23 +27,40 @@
       margin-top: 5%;
     }
   }
-  span, a{
+  span{
     font-family: 'Inconsolata';
     @extend .gradientText
   }
   a{
     font-weight: bold;
-    font-size: 1.35rem;
-    @extend .underline
+    font-size: 1.25rem;
+    @extend .button
   }
-  .seeWork{
+  .explore{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-direction: row;
-    justify-content: flex-end;
-    img{
-      width: 40px;
-      transform: rotate(-90deg);
+    &:hover{
+      h2{
+        opacity: 0.5
+      }
     }
+    div{
+      cursor: pointer;
+      margin-top: 15px;
+      width: 3px;
+      height: 100px;
+      background: $key1;
+      animation: scrollAnimation 2.5s ease infinite;
+    }
+    h2{
+      cursor: pointer;
+      font-size: 1rem;
+      letter-spacing: 0.25rem;
+      transition: opacity 0.25s;
+    }
+    position: absolute;
+    bottom: 4%;
+    right: 15%;
   }
 }

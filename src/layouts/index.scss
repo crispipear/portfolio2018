@@ -18,12 +18,16 @@ a{
   }
 }
 body{
+  min-width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: $bg;
+  margin: 0%;
+  overflow-x: hidden;
   border-image: linear-gradient(to top, $key1 0%, $key2 100%);
   border-image-slice: 1;
   border-style: solid;
   border-width: 25px;
-  margin: 0%;
-  overflow-x: hidden;
 }
 body::-webkit-scrollbar {
   width: 0.5em;
@@ -34,7 +38,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #9294a3
+  background-color: #83848f
 }
 section{
   width: 100%;
@@ -77,8 +81,22 @@ h1,h2,h3,h4,h5,h6,p{
     transition: opacity 0.25s;
     @extend .gradientText;
     font-weight: bold;
-    &:hover{
-      opacity: 0.5;
-    }
+    @extend .underline;
   }
+}
+
+#load{
+  background: $bg;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 100;
+  transition: opacity 1s
+}
+.onLoad{
+  opacity: 1;
+}
+.finishLoad{
+  opacity: 0;
 }

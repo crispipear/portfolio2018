@@ -1,16 +1,14 @@
 import React, {Component} from 'react'
-import ProjectsData from '../data/projects'
 import Background from '../components/background/Background'
-import LandPage from '../components/landpage/LandPage'
-import Work from '../components/landpage/Work'
+import Content from '../components/about/About'
 import PageTransition from 'gatsby-plugin-page-transitions';
 
-const Home = () => (
+
+const About = () => (
   <PageTransition>
     <Background/>
-    <LandPage/>
-    <Work/>
+    <Content/>
   </PageTransition>
 )
 
-export default Home
+export default About
