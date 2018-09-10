@@ -100,3 +100,21 @@ h1,h2,h3,h4,h5,h6,p{
 .finishLoad{
   opacity: 0;
 }
+
+.notFound{
+  box-sizing: border-box;
+  height: 70vh;
+  flex-direction: column;
+  padding-top: 7.5%;
+  h1{
+    font-size: 4rem;
+  }
+  a{
+    margin-left: -5%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 100%;
+    @extend .gradientText;
+    @extend .button;
+  }
+}

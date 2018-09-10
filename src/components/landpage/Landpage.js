@@ -1,5 +1,6 @@
 import React from 'react'
 import './landpage.scss'
+import Link from 'gatsby-link'
 
 const Content = () => (
     <section className='landpage'>
@@ -11,10 +12,14 @@ const Content = () => (
           <h3>Just slightly obsessed with empty spaces</h3>
         </div>
       </div>
-      <div className='explore' onClick={() => window.scrollTo(0, document.querySelector('.work').getBoundingClientRect().top)}>
-        <h2>EXPLORE</h2>
+      <div className='explore-work' onClick={() => window.scrollTo(0, document.querySelector('.work').getBoundingClientRect().top)}>
+        <h2>WORK</h2>
         <div/>
       </div>
+      <Link to="/about"><div className='explore-about'>
+          <h2>ABOUT</h2>
+          <div/>
+      </div></Link>
     </section>
 )
 

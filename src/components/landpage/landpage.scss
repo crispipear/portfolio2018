@@ -1,6 +1,6 @@
 @import "../../styles/global";
 
-@keyframes scrollAnimation{
+@keyframes scrollAnimation1{
   0%{
     background: $key1;
     transform: translateY(0px);
@@ -14,7 +14,20 @@
     transform: translateY(0px);
   }
 }
-
+@keyframes scrollAnimation2{
+  0%{
+    background: $key1;
+    transform: translateX(0px);
+  }
+  50%{
+    background: $key2;
+    transform: translateX(15px);
+  }
+  100%{
+    background: $key1;
+    transform: translateX(0px);
+  }
+}
 .landpage{
   position: relative;
   h1{
@@ -31,23 +44,9 @@
     font-family: 'Inconsolata';
     @extend .gradientText
   }
-  .explore{
+  .explore-about, .explore-work{
+    position: absolute;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    &:hover{
-      h2{
-        opacity: 0.5
-      }
-    }
-    div{
-      cursor: pointer;
-      margin-top: 15px;
-      width: 3px;
-      height: 100px;
-      background: $key1;
-      animation: scrollAnimation 2.5s ease infinite;
-    }
     h2{
       font-family: 'Inconsolata';
       cursor: pointer;
@@ -56,6 +55,37 @@
       transition: opacity 0.25s;
       font-weight: bold;
       @extend .gradientText
+    }
+    div{
+      cursor: pointer;
+      background: $key1;
+    }
+    &:hover{
+      h2{
+        opacity: 0.5
+      }
+    }
+  }
+  .explore-about{
+    flex-direction: row;
+    align-items: center;
+    bottom: 40%;
+    right: 0.75%;
+    div{
+      margin-left: 15px;
+      width: 100px;
+      height: 3px;
+      animation: scrollAnimation2 2.5s ease infinite;
+    }
+  }
+  .explore-work{
+    flex-direction: column;
+    align-items: center;
+    div{
+      margin-top: 15px;
+      width: 3px;
+      height: 100px;
+      animation: scrollAnimation1 2.5s ease infinite;
     }
     position: absolute;
     bottom: 4%;

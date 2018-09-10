@@ -25,7 +25,9 @@
       @extend .frame;
     }
     .proj-info{
-      width: 35%;
+      box-sizing: border-box;
+      padding-top: 2.5%;
+      width: 32.5%;
       height: 55vh;
       h2{
         font-size: 3rem;
