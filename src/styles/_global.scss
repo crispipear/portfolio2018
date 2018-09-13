@@ -24,7 +24,6 @@ $key2: #58adf4;
   -webkit-border-image: -webkit-linear-gradient(left, $key1, $key2);
   border-image-slice: 1;
   -webkit-border-image-slice: 1;
-  min-width: 30%;
   text-align: center;
   &:after{
     transition: all 0.5s;
@@ -66,19 +65,30 @@ $key2: #58adf4;
 .underline{
   display: inline-block;
   position: relative;
-  padding-bottom: 1px;
+  padding-bottom: 4px;
   &:before{
     position: absolute;
     right: 0;
     bottom: 0;
     content: "";
-    height: 2px;
+    height: 3px;
     transition: all 0.25s;
-    @include bgGrad(145deg, lighten($key1, 5%), lighten($key2, 5%));
-    z-index: -1;
+    background: darken($bg, 10%);
+    z-index: 0;
+    width: 100%;
+  }
+  &:after{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    transition: all 0.25s;
+    @include bgGrad(90deg, $key1, $key2);
+    z-index: 1;
     width: 0%;
   }
-  &:hover:before{
+  &:hover:after{
     width: 100%;
     left: 0;
   }
@@ -99,6 +109,7 @@ $key2: #58adf4;
     position: absolute;
     left: -20px;
     bottom: -20px;
+    z-index: 5;
   }
   &:after{
     content: "";

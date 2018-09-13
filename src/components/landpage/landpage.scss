@@ -1,38 +1,27 @@
 @import "../../styles/global";
 
-@keyframes scrollAnimation1{
-  0%{
-    background: $key1;
-    transform: translateY(0px);
-  }
-  50%{
-    background: $key2;
-    transform: translateY(15px);
-  }
-  100%{
-    background: $key1;
-    transform: translateY(0px);
-  }
-}
-@keyframes scrollAnimation2{
-  0%{
-    background: $key1;
-    transform: translateX(0px);
-  }
-  50%{
-    background: $key2;
-    transform: translateX(15px);
-  }
-  100%{
-    background: $key1;
-    transform: translateX(0px);
-  }
-}
+
 .landpage{
   position: relative;
   h1{
     font-weight: 300;
-    font-size: 2.75rem;
+    &:first-child{
+      font-size: 7.5rem;
+      letter-spacing: 0.5rem;
+    }
+    &:nth-child(2){
+      position: relative;
+      &:before{
+        content: "";
+        position: absolute;
+        right: 102%;
+        top: 45%;
+        @include bgGrad(90deg, $key1, $key2);
+        width: 300px;
+        height: 15%;
+      }
+      font-size: 3rem;
+    }
   }
   h3{
     font-size: 1.35rem;
@@ -70,25 +59,33 @@
     flex-direction: row;
     align-items: center;
     bottom: 40%;
-    right: 0.75%;
+    right: 0%;
     div{
-      margin-left: 15px;
-      width: 100px;
+      @include bgGrad(90deg, $key1, $key2);
+      margin-left: 20px;
+      width: 125px;
       height: 3px;
-      animation: scrollAnimation2 2.5s ease infinite;
+      transition: transform 0.3s;
+    }
+    &:hover div{
+      transform: translateX(10%);
     }
   }
   .explore-work{
     flex-direction: column;
     align-items: center;
     div{
-      margin-top: 15px;
+      @include bgGrad(180deg, $key1, $key2);
+      margin-top: 20px;
       width: 3px;
-      height: 100px;
-      animation: scrollAnimation1 2.5s ease infinite;
+      height: 125px;
+      transition: transform 0.3s;
+    }
+    &:hover div{
+      transform: translateY(10%);
     }
     position: absolute;
-    bottom: 4%;
+    bottom: 0%;
     right: 15%;
   }
 }

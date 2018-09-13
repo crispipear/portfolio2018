@@ -11,15 +11,17 @@ export default class Content extends Component {
         <div className="container">
           {
             ProjectsData.map((project, key) => (
-              <div key={key} className="proj-div">
-                <div className="proj-thumbnail" style={{background: `url(${require(`../../data/${project.path}/thumbnail.png`)}) no-repeat center`}}/>
+              <Link  key={key} className="proj-div" to={`/${project.path}`}>
+                <div className="proj-thumbnail-container">
+                  <div className="proj-overlay"/>
+                  <div className="proj-thumbnail" style={{backgroundImage: `url(${require(`../../data/${project.path}/thumbnail.png`)})`}}/>
+                </div>
                 <div className="proj-info">
                   <h2>{project.name}</h2>
                   <p>/{project.type}</p>
                   <p>{project.des}</p>
-                  <Link to={`/${project.path}`}>SEE PROJECT</Link>
                 </div>
-              </div>
+              </Link>
             ))
           }
         </div>
