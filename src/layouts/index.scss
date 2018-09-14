@@ -47,7 +47,7 @@ section{
 .container{
   position: relative;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1250px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -62,36 +62,31 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .footer{
-  @include bgGrad(90deg, $key1, $key2)
-  margin-top: 5%;
+  background: darken($bg, 2.5%);
   height: 12.5vh;
   .container{
     display: flex;
     justify-content: space-between;
   }
   span, span a{
-    color: $bg;
     font-size: 1rem;
     letter-spacing: 0.075rem;
   }
   span a{
+    @extend.gradientText;
     margin: 0% 7.5px;
     transition: opacity 0.25s;
-    font-weight: 400;
+    font-weight: bold;
     @extend .underline;
     padding-bottom: 3px;
-    &:before, &:after{
-      height: 2px;
-    }
-    &:before{
-      opacity: 0.25
-    }
-    &:after{
-      background: $bg
-    }
   }
 }
-
+.projectPage{
+  height: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 #load{
   background: $bg;
   top: 0;
@@ -110,7 +105,7 @@ h1,h2,h3,h4,h5,h6,p{
 
 .notFound{
   box-sizing: border-box;
-  height: 70vh;
+  height: 77.75vh;
   flex-direction: column;
   padding-top: 7.5%;
   h1{

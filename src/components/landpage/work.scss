@@ -37,19 +37,16 @@
       top: 3.5%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      align-items: flex-end;
       transition: opacity 0.35s;
       h2{
         color: white;
         font-family: 'Ubuntu Mono';
         font-size: 1.15rem;
         letter-spacing: 0.25rem;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
       }
       img{
-        width: 75px;
+        width: 45px;
         transform: scaleX(-1);
         margin-bottom: 15%;
       }
@@ -90,7 +87,6 @@
       h2{
         font-size: 1.75rem;
         letter-spacing: 0.15rem;
-        font-family: 'Ubuntu Mono';
         margin-bottom: 5%;
         font-weight: 400;
       }

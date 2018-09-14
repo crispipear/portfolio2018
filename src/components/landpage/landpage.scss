@@ -17,7 +17,7 @@
         right: 102%;
         top: 45%;
         @include bgGrad(90deg, $key1, $key2);
-        width: 300px;
+        width: 310px;
         height: 15%;
       }
       font-size: 3rem;
@@ -74,6 +74,8 @@
   .explore-work{
     flex-direction: column;
     align-items: center;
+    bottom: 0%;
+    right: 15%;
     div{
       @include bgGrad(180deg, $key1, $key2);
       margin-top: 20px;
@@ -84,8 +86,5 @@
     &:hover div{
       transform: translateY(10%);
     }
-    position: absolute;
-    bottom: 0%;
-    right: 15%;
   }
 }

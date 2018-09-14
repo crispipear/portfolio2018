@@ -5,7 +5,7 @@ class Content extends Component{
   componentDidMount(){
     setTimeout(() => {
       this.props.update(true)
-    }, 3000)
+    }, 2000)
   }
   render(){
     return (

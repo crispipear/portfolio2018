@@ -6,11 +6,11 @@ import Resume from '../../../static/suli_resume.pdf'
 const skills = [
   {
     cat: 'General',
-    content: ['Front End Development', 'UI/UX Design', 'Software Prototyping', 'Video Prototyping', 'Design/Art Direction']
+    content: ['Front End Development', 'UI/UX Design', 'Application Prototyping', 'Video Prototyping', 'Design/Art Direction']
   },
   {
     cat: 'Technical',
-    content: ['Javascript', 'React & React Native', 'Redux', 'jQuery', 'Node', 'HTML/CSS', '(...see more in resume)']
+    content: ['Javascript', 'React & React Native', 'Redux', 'jQuery', 'Node', 'HTML/CSS', '(...and more)']
   }
 ]
 
@@ -24,12 +24,13 @@ export default class Content extends Component {
               <img src={Profile}/>
             </div>
             <p><a href="mailto:hiiamsuli@gmail.com">SAY HELLO</a> &#x1f4ac;</p>
-            <p><a href={Resume} target="_blank">DOWNLOAD RESUME</a> &#x1F649;</p>
+            <p><a href={Resume} target="_blank">SEE RESUME</a> &#x1f648;</p>
           </div>
           <div className='aboutContent'>
             <h1>Hi, my name is Su Li / 李素莹</h1>
             <p>
-              I am a <span>Front End Developer & UX Designer</span> from the Greater Seattle Area in Washington.
+              I am a <span>Front End Developer & UX Designer</span> from the Greater Seattle Area. Focused on building beautiful products and designing user experiences that offers efficient
+              human centered solutions to problems.
             </p>
             <p>
               Currently at <span>iSoftStone North America</span> working on UI development and native applications somewhere in Everett ✈️
@@ -53,12 +54,10 @@ export default class Content extends Component {
             }
             </div>
             <p>
-              I am passionate about creating beautiful products that connect the users and technology together.
-              My experience of collaborating with engineers to build applications support to deliver consumer experiences was one of the highlights in
-              my life that inspired me to keep learning about design and development.
-            </p>
-            <p>
-              Even though I am focused on the front end I also like to experiment and break some stuff in the back end. When I am not breaking stuff I like to play games and eat good food :^)
+              Originally my primary focus was visual communication, but over the years technology has influenced me to the development path.
+              My experience of collaborating with engineers to build application supports to deliver consumer experiences was one of the highlights in
+              my life. It has inspired me to keep learning about design and development. Even though I am focused on the front end I also like to experiment and break some stuff in the back end.
+              When I am not breaking stuff I like to play games and eat good food :^)
             </p>
           </div>
         </div>

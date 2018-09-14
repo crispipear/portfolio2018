@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 225 150" style="enable-background:new 0 0 225 150;" xml:space="preserve">
+	 viewBox="0 0 152.5 45.5" style="enable-background:new 0 0 152.5 45.5;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;stroke:#353535;stroke-width:6.7814;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
 <g>
-	<line class="st0" x1="185.1" y1="75" x2="39.9" y2="75"/>
-	<line class="st0" x1="39.9" y1="75" x2="78.3" y2="112.5"/>
-	<line class="st0" x1="39.9" y1="75" x2="78.3" y2="37.5"/>
+	<g>
+		<line class="st0" x1="149.1" y1="22.8" x2="3.9" y2="22.8"/>
+		<line class="st0" x1="3.9" y1="22.8" x2="36.5" y2="41.3"/>
+	</g>
+	<line class="st0" x1="36.5" y1="4.3" x2="3.9" y2="22.8"/>
 </g>
 </svg>

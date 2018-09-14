@@ -1,0 +1,179 @@
+@import "../../styles/global";
+
+.projHeader{
+  position: relative;
+  .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .projHeader-image, .projHeader-info{
+    height: 75vh;
+  }
+  .projHeader-block1{
+    position: absolute;
+    width: 25%;
+    height: 50%;
+    background: rgba($text, 0.05);
+    left: 12.5%;
+    bottom: 5%;
+    z-index: -1;
+  }
+  .projHeader-block2{
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    background: rgba($text, 0.025);
+    right: 0%;
+    top: 0%;
+    z-index: -1;
+  }
+  .projHeader-image{
+    transition: all 0.5s;
+    width: 45%;
+    @include box-shadow(5px, 7.5px, 15px, rgba($text, 0.15), false);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .projHeader-info{
+    width: 47.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+      letter-spacing: 0.2rem;
+      font-size: 3.5rem;
+      margin: 0% 0% 5% 0%;
+    }
+    p{
+      margin: 0% 0% 2.5% 10%;
+      font-size: 1.1rem;
+      line-height: 2rem;
+    }
+    p span{
+      @extend .gradientText;
+      font-weight: bold;
+      font-family: 'Ubuntu Mono'
+    }
+  }
+  .explore-more{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0%;
+    right: 15%;
+    h2, div{
+      cursor: pointer;
+    }
+    h2{
+      font-family: 'Ubuntu Mono';
+      font-size: 1rem;
+      letter-spacing: 0.35rem;
+      transition: opacity 0.25s;
+      font-weight: bold;
+      @extend .gradientText;
+    }
+    div{
+      background: $key1;
+    }
+    div{
+      @include bgGrad(180deg, $key1, $key2);
+      margin-top: 20px;
+      width: 3px;
+      height: 125px;
+      transition: transform 0.3s;
+    }
+    &:hover div{
+      transform: translateY(10%);
+    }
+  }
+}
+
+.projFooter{
+  height: 45vh;
+  .container{
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .projFooter-block-container, .projFooter-see{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .projFooter-block-container{
+    justify-content: space-between;
+    width: 50%;
+  }
+  .projFooter-see{
+    width: 40%;
+    justify-content: flex-start;
+    h1{
+      margin: 0%;
+      position: relative;
+      @extend .gradientText;
+      font-size: 1.75rem;
+      font-family: 'Ubuntu Mono';
+      &:before{
+        content: "";
+        position: absolute;
+        right: -175px;
+        top: 45%;
+        @include bgGrad(90deg, $key1, $key2);
+        width: 150px;
+        height: 3px;
+      }
+    }
+  }
+  .projFooter-block{    
+    transition: all 0.35s;
+    @include box-shadow(0px, 7.5px, 30px, rgba($text, 0.15), false);
+    cursor: pointer;
+    width: 45%;
+    height: 75%;
+    position: relative;
+    div{
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    .projFooter-block-bg{
+      z-index: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .projFooter-block-info{
+      transition: all 0.5s;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba($text, 0.95);
+      flex-direction: column;
+      img{
+        cursor: pointer;
+        width: 17.5%
+      }
+      h1{
+        margin-top: 7.5%;
+        color: $bg;
+      }
+    }
+    &:hover{
+      transform: scale(1.05);
+      @include box-shadow(0px, 7.5px, 40px, rgba($text, 0.25), false);
+      .projFooter-block-info{
+        background: rgba($text, 0.1);
+      }
+    }
+  }
+}
