@@ -7,6 +7,8 @@ import favicon from '../../static/favicon.ico'
 import Footer from '../components/Footer'
 import Menu from '../components/menu/Menu'
 
+import {SiteProvider} from '../components/SiteContext'
+
 const scrollLib = require('really-smooth-scroll')
 scrollLib.shim()
 scrollLib.config({
@@ -15,23 +17,25 @@ scrollLib.config({
 })
 
 const Layout = ({ children, data }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'author', content: 'Su Li'},
-        { name: 'description', content: 'Front End Developer and UX Designer from Greater Seattle Area.' },
-        { name: 'keywords', content: 'Su Li, Portfolio, Front End Developer, Web Developer, Design, Design Portfolio, UX Designer' },
-        { name: 'viewport', content: 'width=device-width,initial-scale=1.0'}
-      ]}
-      link={[
-        { rel: 'icon', href: favicon}
-      ]}
-    />
-    <Menu/>
-    {children()}
-    <Footer/>
-  </div>
+    <div>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            { name: 'author', content: 'Su Li'},
+            { name: 'description', content: 'Front End Developer and UX Designer from Greater Seattle Area.' },
+            { name: 'keywords', content: 'Su Li, Portfolio, Front End Developer, Web Developer, Design, Design Portfolio, UX Designer' },
+            { name: 'viewport', content: 'width=device-width,initial-scale=1.0'}
+          ]}
+          link={[
+            { rel: 'icon', href: favicon}
+          ]}
+        />
+        <SiteProvider>
+          <Menu/>
+          {children()}
+          <Footer/>
+        </SiteProvider>
+    </div>
 )
 
 Layout.propTypes = {

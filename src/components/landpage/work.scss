@@ -12,6 +12,7 @@
     flex-wrap: wrap;
   }
   .proj-div{
+    background-color: $bg;
     width: 46%;
     *{
       cursor: pointer!important;
@@ -28,6 +29,31 @@
     &:nth-child(even) {
       margin-top: 15%;
     }
+    .proj-see{
+      opacity: 0;
+      position: absolute;
+      z-index: 5;
+      right: 5%;
+      top: 3.5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.35s;
+      h2{
+        color: white;
+        font-family: 'Ubuntu Mono';
+        font-size: 1.15rem;
+        letter-spacing: 0.25rem;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+      }
+      img{
+        width: 75px;
+        transform: scaleX(-1);
+        margin-bottom: 15%;
+      }
+    }
     .proj-thumbnail-container{
       width: 100%;
       height: 65vh;
@@ -40,8 +66,8 @@
       width: 100%;
     }
     .proj-overlay{
-      background: $text;
-      transition: opacity 0.75s;
+      @include bgGrad(135deg, $key1, $key2);
+      transition: opacity 0.35s;
       z-index: 1;
       opacity: 0;
     }
@@ -52,23 +78,28 @@
       background-repeat: no-repeat;
     }
     .proj-info{
-      background-color: $bg;
       padding: 5%;
       box-sizing: border-box;
       width: 100%;
       min-height: 22.5vh;
       height: auto;
+      z-index: 5;
+      h2, p{
+        transition: color 0.35s;
+      }
       h2{
         font-size: 1.75rem;
         letter-spacing: 0.15rem;
-        @extend .gradientText;
+        font-family: 'Ubuntu Mono';
+        margin-bottom: 5%;
+        font-weight: 400;
       }
       p{
         margin: 1.5% 0%;
         text-align: left;
         &:nth-child(2){
           color: rgba($text, 0.6);
-          font-family: 'Inconsolata';
+          font-family: 'Ubuntu Mono';
         }
         font-size: 1rem;
         line-height: 1.75rem;
@@ -78,8 +109,13 @@
       .proj-thumbnail{
         transform: scale(1.15);
       }
-      .proj-overlay{
-        opacity: 0.5
+      .proj-overlay, .proj-see{
+        opacity: 0.97
+      }
+      .proj-info{
+        h2, p{
+          color: white
+        }
       }
       @include box-shadow(0px, 7.5px, 40px, rgba($text, 0.25), false);
     }

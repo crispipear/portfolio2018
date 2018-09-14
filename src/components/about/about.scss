@@ -12,7 +12,7 @@
     padding-top: 7.5%;
   }
   a, span{
-    font-family: 'Inconsolata';
+    font-family: 'Ubuntu Mono';
     font-weight: bold;
     font-size: 105%;
     @extend .gradientText;
@@ -24,7 +24,7 @@
     padding-top: 7.5%;
     width: 65%;
     h1{
-      font-family: 'Inconsolata', '微软雅黑';
+      font-family: 'Ubuntu Mono', '微软雅黑';
       font-size: 2.25rem;
       margin-bottom: 7.5%;
       @extend .gradientText

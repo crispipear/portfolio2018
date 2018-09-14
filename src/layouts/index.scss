@@ -1,5 +1,5 @@
 @import "../styles/global";
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
 
 *{
   font-family: Helvetica, Arial, sans-serif;
@@ -9,7 +9,7 @@
   cursor: default;
 }
 a{
-  font-family: 'Inconsolata';
+  font-family: 'Ubuntu Mono';
   cursor: pointer;
   letter-spacing: 0.1rem!important;
   text-decoration: none;
