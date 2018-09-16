@@ -5,7 +5,8 @@ const SiteContext = React.createContext({
   updateLoadStatus: () => null,
   currentPage: 0,
   updateCurrentPage: () => null,
-  scroll: () => null
+  scroll: () => null,
+  showScrollUp: false
 })
 
 export const SiteConsumer = SiteContext.Consumer
@@ -14,12 +15,17 @@ export class SiteProvider extends Component {
   state = {
     loadedSite: false,
     currentage: 0,
+    showScrollUp: false
   }
   componentDidMount(){
-    document.addEventListener('scroll', this._updateScrollVal)
+    document.addEventListener('scroll', this._updateScroll)
   }
-  _updateScrollVal = () => {
-    this.setState({scrollY: window.scrollY})
+  _updateScroll = () => {
+    if(window.scrollY > window.innerHeight/2){
+      this.setState({showScrollUp: true})
+    }else if(window.scrollY <= window.innerHeight/2){
+      this.setState({showScrollUp: false})
+    }
   }
   updateLoadStatus = status => {
     this.setState({loadedSite: status})
@@ -51,6 +57,7 @@ export class SiteProvider extends Component {
           currentPage: this.state.currentPage,
           updateCurrentPage: this.updateCurrentPage,
           scroll: this.getScroll,
+          showScrollUp: this.state.showScrollUp
         }}
       >
         {this.props.children}

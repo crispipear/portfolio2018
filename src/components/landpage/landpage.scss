@@ -92,3 +92,11 @@
     }
   }
 }
+
+.landpagedone{
+  h1, h3, .explore-work, .explore-about{
+    -webkit-clip-path: unset!important;
+    clip-path: unset!important;
+    animation: none!important;
+  }
+}

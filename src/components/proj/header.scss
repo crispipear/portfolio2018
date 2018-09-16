@@ -1,0 +1,105 @@
+@import "../../styles/global";
+
+.projHeader{
+  position: relative;
+  .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .projHeader-image, .projHeader-info{
+    height: 75vh;
+  }
+  .projHeader-block1{
+    position: absolute;
+    width: 25%;
+    height: 50%;
+    background: rgba($text, 0.05);
+    left: 12.5%;
+    bottom: 5%;
+    z-index: -1;
+  }
+  .projHeader-block2{
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    background: rgba($text, 0.025);
+    right: 0%;
+    top: 0%;
+    z-index: -1;
+  }
+  .projHeader-image{
+    width: 45%;
+    @include box-shadow(5px, 7.5px, 30px, rgba($text, 0.25), false);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @extend .clipDown;
+    animation: clipDown 0.5s ease-in-out 0.75s forwards;
+  }
+  .projHeader-info{
+    width: 47.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+      letter-spacing: 0.2rem;
+      font-size: 3.5rem;
+      margin: 0% 0% 5% 0%;
+      @extend .clipRight;
+      animation: clipRight 0.75s ease-in-out 1.25s forwards;
+    }
+    p{
+      @extend .clipDown;
+      animation: clipDown 0.75s ease-in-out 2.5s forwards;
+      margin: 0% 0% 2.5% 10%;
+      font-size: 1.1rem;
+      line-height: 2rem;
+    }
+    .projHeader-overview{
+      @extend .clipRight;
+      animation: clipRight 0.75s ease-in-out 1.75s forwards;
+    }
+    p span{
+      @extend .gradientText;
+      font-weight: bold;
+      font-family: 'Ubuntu Mono'
+    }
+  }
+  .explore-more{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0%;
+    right: 15%;
+    @extend .clipUp;
+    animation: clipUp 0.75s ease-in-out 2.75s forwards;
+    h2, div{
+      cursor: pointer;
+    }
+    h2{
+      font-family: 'Ubuntu Mono';
+      font-size: 1rem;
+      letter-spacing: 0.35rem;
+      transition: opacity 0.25s;
+      font-weight: bold;
+      @extend .gradientText;
+    }
+    div{
+      background: $key1;
+    }
+    div{
+      @include bgGrad(180deg, $key1, $key2);
+      margin-top: 20px;
+      width: 3px;
+      height: 125px;
+      transition: transform 0.3s;
+    }
+    &:hover div{
+      transform: translateY(10%);
+    }
+  }
+}

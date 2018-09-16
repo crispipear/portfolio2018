@@ -138,59 +138,66 @@ $key2: #589ff4;
   }
 }
 .clipLeft{
-  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  -webkit-clip-path: polygon(150% 0, 150% 0, 150% 150%, 150% 150%);
+  clip-path: polygon(150% 0, 150% 0, 150% 150%, 150% 150%);
 }
 .clipRight{
-  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 0 0, 0 150%, 0% 150%);
+  clip-path: polygon(0 0, 0 0, 0 150%, 0% 150%);
 }
 .clipUp{
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 150%, 150% 150%, 150% 150%, 0 150%);
+  clip-path: polygon(0 150%, 150% 150%, 150% 150%, 0 150%);
 }
 .clipDown{
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  -webkit-clip-path: polygon(0 0, 150% 0, 150% 0, 0 0);
+  clip-path: polygon(0 0, 150% 0, 150% 0, 0 0);
 }
 
 @keyframes clipLeft{
   from{
-    -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
-    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    -webkit-clip-path: polygon(150% 0, 150% 0, 150% 150%, 150% 150%);
+    clip-path: polygon(150% 0, 150% 0, 150% 150%, 150% 150%);
   }
   to{
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 150% 0%, 150% 150%, 0% 150%);
+    clip-path: polygon(0 0, 150% 0%, 150% 150%, 0% 150%);
   }
 }
 @keyframes clipRight{
   from{
-    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 0 0, 0 150%, 0% 150%);
+    clip-path: polygon(0 0, 0 0, 0 150%, 0% 150%);
   }
   to{
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 150% 0%, 150% 150%, 0% 150%);
+    clip-path: polygon(0 0, 150% 0%, 150% 150%, 0% 150%);
   }
 }
 @keyframes clipUp{
   from{
-    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 150%, 150% 150%, 150% 150%, 0 150%);
+    clip-path: polygon(0 150%, 150% 150%, 150% 150%, 0 150%);
   }
   to{
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 150% 0%, 150% 150%, 0% 150%);
+    clip-path: polygon(0 0, 150% 0%, 150% 150%, 0% 150%);
   }
 }
 @keyframes clipDown{
   from{
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    -webkit-clip-path: polygon(0 0, 150% 0, 150% 0, 0 0);
+    clip-path: polygon(0 0, 150% 0, 150% 0, 0 0);
   }
   to{
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 150% 0%, 150% 150%, 0% 150%);
+    clip-path: polygon(0 0, 150% 0%, 150% 150%, 0% 150%);
   }
+}
+
+.show{
+  opacity: 1;
+}
+.hide{
+  opacity: 0;
 }

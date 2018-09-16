@@ -13,7 +13,8 @@ export default [
      "scope": ["Mobile App Design", "UI/UX Design", "Product Design"],
      "role": ["UI/UX Designer"],
      "year": "2018",
-     "thumbnail": clinic
+     "thumbnail": clinic,
+     "overview": "A technological system designed to optimize clinic management to improve the clinic experience of the patients. It utilizes data transfer between smart devices in the clinic systems to improve the clinic workflow efficiency, therefore improves the overall experience for the patients."
    },
    {
      "name": "Waves",
@@ -23,7 +24,8 @@ export default [
      "scope": ["iOS App Prototype (Objective C)", "Video Prototype", "Research"],
      "role": ["Lead Developer, Video Producer, UI/UX Designer"],
      "year": "2018",
-     "thumbnail": waves
+     "thumbnail": waves,
+     "overview": "A conceptual holographic installation integrated with mobile application. The application provides a safe space to deal with stress while the installation utilizes the public space to grant awareness to mental health."
    },
    {
      "name": "Eatlixir",
@@ -34,6 +36,7 @@ export default [
      "role": ["Web Developer", "UI/UX Designer"],
      "year": "2017",
      "thumbnail": eatlixir,
+     "overview": "A web platform that provides medicinal diet information based on Chinese herbology. It acts as an alternate dietary resource hope to reduce unhealthy eating habits.",
      "link": "http://students.washington.edu/rice74/IMD351/eatlixir/"
    },
    {
@@ -44,6 +47,7 @@ export default [
      "scope": ["Mobile app design", "UI/UX Design", "Product Design", "Research"],
      "role": ["Web Developer", "UI/UX Designer"],
      "year": "2017",
-     "thumbnail": pockethusky
+     "thumbnail": pockethusky,
+     "overview": "A mobile application tool to assist students with college resources information. The integrated alternate reality game also engages student interactions and explorations on campus."
    }
 ]

@@ -6,16 +6,18 @@ class Content extends Component{
   componentDidMount(){
     setTimeout(() => {
       this.props.update(true)
-    }, 500)
+    }, 6000)
   }
   render(){
     return (
-      <section className={!this.props.loadedSite?'loadscreen':'loadscreen loaddone'}>
+      <section className={'loadscreen'}>
         <div className='loadscreen-top'>
           <div className='loadscreen-bar'/>
+          <div className='loadscreen-bar2'/>
         </div>
         <div className='loadscreen-bottom'>
           <div className='loadscreen-bar'/>
+          <div className='loadscreen-bar2'/>
         </div>
       </section>
     )
@@ -24,7 +26,7 @@ class Content extends Component{
 export default () => (
   <SiteConsumer>
     {({loadedSite, updateLoadStatus}) => (
-      <Content update={updateLoadStatus} loadedSite={loadedSite}/>
+      <Content update={updateLoadStatus}/>
     )}
   </SiteConsumer>
 )

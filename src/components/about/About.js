@@ -37,7 +37,7 @@ export default class Content extends Component {
                 </p>
                 <p>
                   Currently at <span>iSoftStone North America</span> working on UI development and native applications somewhere in Everett ✈️
-                  I am also an undergraduate student at <span>University of Washington</span> studying Interactive Media Design.
+                  I am also an Interactive Media Design student at <span>UW Bothell</span>.
                 </p>
                 <h2>Skills —</h2>
                 <div className='skillsContainer'>

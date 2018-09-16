@@ -3,7 +3,7 @@ import React from 'react'
 const Content = () => (
   <section className='footer'>
     <div className='container'>
-      <span>2018 &#169; Made with
+      <span>2018 &#169; Developed with
         <a href="https://www.gatsbyjs.org/" target="_blank">GatsbyJS</a>
         by Su Li &#x1F60E;</span>
       <span>

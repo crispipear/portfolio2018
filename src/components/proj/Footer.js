@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './proj.scss'
+import './footer.scss'
 import {SiteConsumer} from '../SiteContext'
 import ProjectsData from '../../data/projects'
 import Arrow from '../../../static/arrow_light.svg'
@@ -30,14 +30,14 @@ class Content extends Component{
             <h1>SEE MORE PROJECTS</h1>
           </div>
           <div className='projFooter-block-container'>
-            <Link className='projFooter-block' to={`/${prevProj.path}`}>
+            <Link className='projFooter-block' to={`/${prevProj.path}`} onClick={() => window.scrollTo(0, 0)}>
               <div className='projFooter-block-info'>
                 <img src={Arrow}/>
                 <h1>{prevProj.name}</h1>
               </div>
               <div className='projFooter-block-bg' style={{backgroundImage: `url(${prevProj.thumbnail})`}}/>
             </Link>
-            <Link className='projFooter-block' to={`/${nextProj.path}`}>
+            <Link className='projFooter-block' to={`/${nextProj.path}`} onClick={() => window.scrollTo(0, 0)}>
               <div className='projFooter-block-info' style={{alignItems: 'flex-end'}}>
                 <img src={Arrow} style={{transform: 'scale(-1)'}}/>
                 <h1>{nextProj.name}</h1>
