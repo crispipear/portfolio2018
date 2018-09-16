@@ -6,27 +6,27 @@
   h1{
     font-weight: 300;
     &:first-child{
+      @extend .clipDown;
+      animation: clipDown 0.5s ease-in-out 3.25s forwards;
       font-size: 7.5rem;
       letter-spacing: 0.5rem;
     }
     &:nth-child(2){
-      position: relative;
-      &:before{
-        content: "";
-        position: absolute;
-        right: 102%;
-        top: 45%;
-        @include bgGrad(90deg, $key1, $key2);
-        width: 310px;
-        height: 15%;
-      }
-      font-size: 3rem;
+      @extend .clipDown;
+      animation: clipDown 0.5s ease-in-out 3.75s forwards;
+      font-size: 2.5rem;
     }
   }
   h3{
     font-size: 1.35rem;
     &:nth-child(3){
+      @extend .clipUp;
+      animation: clipUp 0.5s ease-in-out 4.25s forwards;
       margin-top: 5%;
+    }
+    &:nth-child(4){
+      @extend .clipUp;
+      animation: clipUp 0.5s ease-in-out 4.75s forwards;
     }
   }
   span{
@@ -56,6 +56,8 @@
     }
   }
   .explore-about{
+    @extend .clipLeft;
+    animation: clipLeft 0.5s ease-in-out 5.25s forwards;
     flex-direction: row;
     align-items: center;
     bottom: 40%;
@@ -72,6 +74,8 @@
     }
   }
   .explore-work{
+    @extend .clipUp;
+    animation: clipUp 0.5s ease-in-out 5.35s forwards;
     flex-direction: column;
     align-items: center;
     bottom: 0%;

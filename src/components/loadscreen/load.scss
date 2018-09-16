@@ -1,61 +1,73 @@
 @import "../../styles/global";
 
-@include keyframes(loadAnmiationShine){
+@include keyframes(loadbar){
   0%{
-    left: -45%
+    width: 0%;
   }
-  75%{
-    left: 100%
-  }
-  100%{
-    left: 100%
-  }
-}
-@include keyframes(loadAnmiationText){
-  0%{
-    top: 0%;
+  90%{
+    width: 100%;
     opacity: 1;
   }
   100%{
-    top: -25%;
+    width: 100%;
     opacity: 0;
+  }
+}
+@include keyframes(loadtop){
+  0%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(-100%);
+  }
+}
+@include keyframes(loadbottom){
+  0%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(100%);
   }
 }
 .loadscreen{
   pointer-events: none;
-  transition: all 1s;
   width: 100%;
   height: 100vh;
   position: fixed;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: $bg;
   z-index: 100;
-  h2{
-    font-family: 'Ubuntu Mono';
-    font-size: 2.5rem;
-    letter-spacing: 0.5rem;
-    @extend .gradientText;
+  .loadscreen-top, .loadscreen-bottom{
+    width: 100%;
+    height: 50vh;
     position: relative;
-    &:before{
-      position: absolute;
-      left: -45%;
-      content: "";
-      height: 3px;
-      background: $bg;
-      filter: blur(20px);
-      z-index: 0;
-      transform: skewX(-15deg);
-      width: 30%;
-      height: 150%;
-      animation: loadAnmiationShine 1s ease-in-out infinite;
-    }
+    background: $key1
   }
+  .loadscreen-bar{
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    position: absolute;
+  }
+  .loadscreen-top .loadscreen-bar{
+    bottom: 0
+  }
+  .loadscreen-bottom .loadscreen-bar{
+    top: 0
+  }
+
 }
 .loaddone{
-  opacity: 0;
-  h2{
-    animation: loadAnmiationText 0.75s ease-in-out forwards
+  .loadscreen-bar{
+    animation: loadbar 2.5s ease-in-out forwards;
+  }
+  .loadscreen-top{
+    animation: loadtop 0.5s ease-in-out 2.25s forwards;
+  }
+  .loadscreen-bottom{
+    animation: loadbottom 0.5s ease-in-out 2.25s forwards;
   }
 }

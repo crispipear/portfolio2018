@@ -6,14 +6,14 @@ import './index.scss'
 import favicon from '../../static/favicon.ico'
 import Footer from '../components/Footer'
 import Menu from '../components/menu/Menu'
-
+import LoadScreen from '../components/loadscreen/Load'
 import {SiteProvider} from '../components/SiteContext'
 
 const scrollLib = require('really-smooth-scroll')
 scrollLib.shim()
 scrollLib.config({
-  mousewheelSensitivity: 7.5,
-  keydownSensitivity: 7.5
+  mousewheelSensitivity: 6,
+  keydownSensitivity: 6
 })
 
 const Layout = ({ children, data }) => (
@@ -31,6 +31,7 @@ const Layout = ({ children, data }) => (
           ]}
         />
         <SiteProvider>
+          <LoadScreen/>
           <Menu/>
           {children()}
           <Footer/>

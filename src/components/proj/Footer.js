@@ -38,7 +38,7 @@ class Content extends Component{
               <div className='projFooter-block-bg' style={{backgroundImage: `url(${prevProj.thumbnail})`}}/>
             </Link>
             <Link className='projFooter-block' to={`/${nextProj.path}`}>
-              <div className='projFooter-block-info'>
+              <div className='projFooter-block-info' style={{alignItems: 'flex-end'}}>
                 <img src={Arrow} style={{transform: 'scale(-1)'}}/>
                 <h1>{nextProj.name}</h1>
               </div>

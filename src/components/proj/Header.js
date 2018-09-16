@@ -2,18 +2,19 @@ import React, {Component} from 'react'
 import './proj.scss'
 import {SiteConsumer} from '../SiteContext'
 
+
 const Content = ({project}) => (
   <SiteConsumer>
     {({scroll}) => (
       <section className='projHeader'>
-        <div className='explore-more' onClick={() => window.scrollTo(0, document.querySelector('.projectPage').getBoundingClientRect().top)}>
+        <div className='explore-more' onClick={() => window.scrollTo(0, document.querySelector('.projectPage').offsetTop)}>
           <h2>MORE</h2>
           <div/>
         </div>
         <div className='projHeader-block1'/>
         <div className='projHeader-block2'/>
         <div className='container'>
-          <div className='projHeader-image' style={Object.assign({backgroundImage: `url(${project.thumbnail})`}, scroll)}/>
+          <div className='projHeader-image' style={Object.assign({backgroundImage: `url(${project.thumbnail})`}, scroll('.projHeader-image'))}/>
           <div className="projHeader-info">
             <h1>{project.name}</h1>
             <p>{project.des}</p>

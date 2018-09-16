@@ -5,7 +5,7 @@ const SiteContext = React.createContext({
   updateLoadStatus: () => null,
   currentPage: 0,
   updateCurrentPage: () => null,
-  scrollY: 0
+  scroll: () => null
 })
 
 export const SiteConsumer = SiteContext.Consumer
@@ -14,8 +14,6 @@ export class SiteProvider extends Component {
   state = {
     loadedSite: false,
     currentage: 0,
-    prevScroll: 0,
-    scroll: 0
   }
   componentDidMount(){
     document.addEventListener('scroll', this._updateScrollVal)
@@ -32,20 +30,16 @@ export class SiteProvider extends Component {
     //notfound: 404
     this.setState({currentPage: page})
   }
-  _updateScrollVal = () => {
+  getScroll = obj => {
     let p = 0
-    if(this.state.prevScroll > window.scrollY){
-      p = -7.5
-    }else if(this.state.prevScroll < window.scrollY){
-      p = 7.5
+    if(document.querySelector(obj) != null){
+      let objPos = document.querySelector(obj).offsetTop
+      p = (objPos-window.scrollY) / 25
     }
     let scroll = {
       transform: `translateY(${p}%)`
     }
-    this.setState({
-      prevScroll: window.scrollY,
-      scroll: scroll
-    })
+    return scroll
   }
 
   render(){
@@ -56,7 +50,7 @@ export class SiteProvider extends Component {
           updateLoadStatus: this.updateLoadStatus,
           currentPage: this.state.currentPage,
           updateCurrentPage: this.updateCurrentPage,
-          scroll: this.state.scroll,
+          scroll: this.getScroll,
         }}
       >
         {this.props.children}

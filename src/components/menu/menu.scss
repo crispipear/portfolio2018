@@ -1,7 +1,7 @@
 @import "../../styles/global";
 @keyframes menuItemsIn {
   0% {
-    transform: translateX(50%);
+    transform: translateX(-50%);
     opacity: 0;
   }
   100% {
@@ -15,19 +15,21 @@
     opacity: 1;
   }
   100% {
-    transform: translateX(50%);
+    transform: translateX(-50%);
     opacity: 0;
   }
 }
 nav{
+  @extend .clipRight;
+  animation: clipRight 0.35s ease-in-out 5.75s forwards;
   position: fixed;
-  right: 50px;
+  left: 50px;
   top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 50;
+  z-index: 10;
   .burger{
     position: relative;
     display: flex;
@@ -59,7 +61,6 @@ nav{
       transition: color 0.25s;
       writing-mode: vertical-rl;
       text-orientation: upright;
-      transform: translateX(50%);
       margin: 25px 0;
       cursor: pointer;
       letter-spacing: 0px;
@@ -87,7 +88,7 @@ nav{
   .burger span{
     margin-left: 4px;
     &:nth-child(2){
-      width: 75%;
+      width: 65%;
     }
   }
 }
