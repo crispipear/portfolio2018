@@ -79,6 +79,11 @@ h1,h2,h3,h4,h5,h6,p{
     @extend .underline;
     padding-bottom: 3px;
   }
+  @include laptop{
+    span, span a{
+      font-size: 0.9rem!important
+    }
+  }
 }
 .projectPage{
   height: auto;

@@ -123,7 +123,7 @@ const Content = () => (
         </div>
       </div>
     </section>
-    <Footer page={0}/>
+    {/*<Footer page={0}/>*/}
   </PageTransition>
 )
 
