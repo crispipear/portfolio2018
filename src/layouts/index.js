@@ -11,12 +11,15 @@ import LoadScreen from '../components/loadscreen/Load'
 import Mobile from '../components/Mobile'
 import {SiteProvider} from '../components/SiteContext'
 
-const scrollLib = require('really-smooth-scroll')
-scrollLib.shim()
-scrollLib.config({
-  mousewheelSensitivity: 7,
-  keydownSensitivity: 7
-})
+
+if (typeof window !== `undefined`) {
+  const scrollLib = require('really-smooth-scroll')
+  scrollLib.shim()
+  scrollLib.config({
+    mousewheelSensitivity: 7,
+    keydownSensitivity: 7
+  })
+}
 
 const Layout = ({ children, data }) => (
     <div>
@@ -32,7 +35,7 @@ const Layout = ({ children, data }) => (
             { rel: 'icon', href: favicon}
           ]}
         />
-          {window.innerWidth <= 750
+          {typeof window !== `undefined` && window.innerWidth <= 750
             ?
             <Mobile/>
             :
@@ -43,7 +46,7 @@ const Layout = ({ children, data }) => (
               {children()}
               <Footer/>
             </SiteProvider>
-           }
+         }
     </div>
 )
 

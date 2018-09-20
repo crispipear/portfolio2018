@@ -1,5 +1,5 @@
 {
-  "name": "Su Li Portfolio",
+  "name": "syli.me",
   "description": "Personal portfolio website built with GatsbyJS",
   "version": "1.0.0",
   "author": "Su Li <hiiamsuli@gmail.com>",
@@ -20,10 +20,12 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build && gh-pages -d public -b gh-pages"
   },
   "devDependencies": {
     "gatsby-plugin-sass": "^1.0.26",
+    "gh-pages": "^2.0.0",
     "prettier": "^1.13.7"
   },
   "repository": {

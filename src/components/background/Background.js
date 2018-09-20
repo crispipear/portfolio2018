@@ -9,6 +9,17 @@ export default class Background extends Component {
     super()
     this.state = {
       renderCanvas: true,
+      windowWidth: 0,
+      windowHeight: 0,
+      center: {},
+      mouseRadius:0,
+      mouse:{}
+    }
+  }
+  componentDidMount(){
+    this._drawBackground()
+    this.setState({
+      renderCanvas: true,
       windowWidth: window.innerWidth,
       windowHeight: window.innerHeight,
       center: {
@@ -20,10 +31,7 @@ export default class Background extends Component {
         x: 0,
         y: 0
       }
-    }
-  }
-  componentDidMount(){
-    this._drawBackground()
+    })
     document.addEventListener('mousemove', this._handleEvents, false)
     document.addEventListener('touchstart', this._handleEvents, false)
     document.addEventListener('touchmove', this._handleEvents, false)

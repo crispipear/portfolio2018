@@ -4,6 +4,7 @@ import {SiteConsumer} from '../SiteContext'
 import ProjectsData from '../../data/projects'
 import Arrow from '../../../static/arrow_light.svg'
 import Link from 'gatsby-link'
+import {scrollTo} from '../../utils'
 
 class Content extends Component{
   state = {
@@ -30,14 +31,14 @@ class Content extends Component{
             <h1>SEE MORE PROJECTS</h1>
           </div>
           <div className='projFooter-block-container'>
-            <Link className='projFooter-block' to={`/${prevProj.path}`} onClick={() => window.scrollTo(0, 0)}>
+            <Link className='projFooter-block' to={`/${prevProj.path}`} onClick={() => scrollTo(0, 0)}>
               <div className='projFooter-block-info'>
                 <img src={Arrow}/>
                 <h1>{prevProj.name}</h1>
               </div>
               <div className='projFooter-block-bg' style={{backgroundImage: `url(${prevProj.thumbnail})`}}/>
             </Link>
-            <Link className='projFooter-block' to={`/${nextProj.path}`} onClick={() => window.scrollTo(0, 0)}>
+            <Link className='projFooter-block' to={`/${nextProj.path}`} onClick={() => scrollTo(0, 0)}>
               <div className='projFooter-block-info' style={{alignItems: 'flex-end'}}>
                 <img src={Arrow} style={{transform: 'scale(-1)'}}/>
                 <h1>{nextProj.name}</h1>

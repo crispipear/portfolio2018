@@ -6,6 +6,13 @@ const getProjectData = projPath => {
   })
 }
 
+const scrollTo = (coord1, coord2) => {
+  if (typeof window !== `undefined`) {
+    window.scrollTo(coord1, coord2)
+  }
+}
+
 module.exports = {
-  getProjectData: getProjectData
+  getProjectData: getProjectData,
+  scrollTo: scrollTo
 }

@@ -38,9 +38,11 @@ export class SiteProvider extends Component {
   }
   getScroll = obj => {
     let p = 0
-    if(document.querySelector(obj) != null){
-      let objPos = document.querySelector(obj).offsetTop
-      p = (objPos-window.scrollY) / 25
+    if (typeof document !== `undefined`) {
+      if(document.querySelector(obj) != null){
+        let objPos = document.querySelector(obj).offsetTop
+        p = (objPos-window.scrollY) / 25
+      }
     }
     let scroll = {
       transform: `translateY(${p}%)`

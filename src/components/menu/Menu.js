@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './menu.scss'
 import Link from 'gatsby-link'
+import {scrollTo} from '../../utils'
 
 
 export default class Menu extends Component {
@@ -11,7 +12,7 @@ export default class Menu extends Component {
     this.setState({
       active: false
     })
-    window.scrollTo(0, 0)
+    scrollTo(0, 0)
   }
   _toggleMenu = () => {
     this.setState({
