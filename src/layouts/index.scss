@@ -120,3 +120,35 @@ h1,h2,h3,h4,h5,h6,p{
     @extend .button;
   }
 }
+
+.mobile{
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 25px;
+  h1{
+    @extend .gradientText;
+    font-size: 30px;
+    font-family: 'Inconsolata'
+  }
+  p{
+    text-align: center;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  div{
+    width: 90%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    a{
+      margin: 7.5px;
+      text-align: center;
+      display: inline-block;
+      @extend .gradientText;
+      font-weight:bold;
+    }
+  }
+}

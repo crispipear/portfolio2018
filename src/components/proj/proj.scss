@@ -8,11 +8,11 @@
   box-sizing: border-box;
   padding: 7.5% 0%;
   .button{
-    padding: 2.5%;
+    padding: 3%;
   }
   img{
     width: 100%;
-    margin: 5% 0%;
+    margin: 1.5% 0%;
   }
   h3{
     font-size: 1.15rem;
@@ -33,21 +33,38 @@
     line-height: 1.75rem;
     margin: 2.5% 0%;
   }
-  .block, .block-two{
+  .block, .block-two, .block-two-center{
     width: 50%;
     margin: 5% 0%;
-    img{margin: 0%}
   }
-  .block-two{
+  .block-two, .block-two-center{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: auto;
-    div, img{
-      width: 45%;
-      height: 100%;
-    }
+    div, img{height: 100%}
+    div{width: 40%}
+    img{width: 50%; margin: 0%}
     h1{margin: 1.5% 0% 5% 0%}
     p{margin: 5% 0%}
+  }
+  .block-two-center{
+    align-items: center;
+  }
+  .block-two{
+    align-items: flex-start;
+  }
+  .block-video{
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+    iframe{
+      border: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
   }
 }

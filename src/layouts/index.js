@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import Menu from '../components/menu/Menu'
 import Up from '../components/menu/Up'
 import LoadScreen from '../components/loadscreen/Load'
+import Mobile from '../components/Mobile'
 import {SiteProvider} from '../components/SiteContext'
 
 const scrollLib = require('really-smooth-scroll')
@@ -31,13 +32,18 @@ const Layout = ({ children, data }) => (
             { rel: 'icon', href: favicon}
           ]}
         />
-        <SiteProvider>
-          <LoadScreen/>
-          <Up/>
-          <Menu/>
-          {children()}
-          <Footer/>
-        </SiteProvider>
+          {window.innerWidth <= 750
+            ?
+            <Mobile/>
+            :
+            <SiteProvider>
+              <LoadScreen/>
+              <Up/>
+              <Menu/>
+              {children()}
+              <Footer/>
+            </SiteProvider>
+           }
     </div>
 )
 

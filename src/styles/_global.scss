@@ -2,7 +2,7 @@
 
 $bg: #fefefe;
 $text: #2d2d2d;
-$key1: #5163de;
+$key1: #515bde;
 $key2: #589ff4;
 
 .gradientText{
@@ -33,12 +33,12 @@ $key2: #589ff4;
     content: '';
     position: absolute;
     z-index: -1;
-    top: 0;
+    top: 0px;
     left: 0;
     right: 0;
     height: 100%;
     @include bgGrad(90deg, $key1, $key2);
-    transform: translateY(-100%)
+    transform: translateY(-101%)
   }
   &:hover{
     animation: .5s ease-in-out flashText forwards;
@@ -56,7 +56,7 @@ $key2: #589ff4;
 }
 @include keyframes (flash) {
   0%{
-    transform: translateY(-100%)
+    transform: translateY(-101%)
   }
   50%{
     transform: translateY(0);
@@ -74,7 +74,7 @@ $key2: #589ff4;
     right: 0;
     bottom: 0;
     content: "";
-    height: 3px;
+    height: 2px;
     transition: all 0.25s;
     background: darken($bg, 15%);
     width: 100%;
@@ -84,7 +84,7 @@ $key2: #589ff4;
     right: 0;
     bottom: 0;
     content: "";
-    height: 3px;
+    height: 2px;
     transition: all 0.25s;
     @include bgGrad(90deg, $key1, $key2);
     z-index: 1;
@@ -200,4 +200,36 @@ $key2: #589ff4;
 }
 .hide{
   opacity: 0;
+}
+
+.fadeInBefore{
+  transform: translateY(25%);
+  opacity: 0;
+}
+.fadeRightBefore{
+  transform: translateX(-25%);
+  opacity: 0;
+}
+@keyframes fadeIn{
+  from{
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes fadeRight{
+  from{
+    transform: translateX(-25%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.fadeInAfter{
+  animation: fadeIn 0.5s ease-in-out forwards;
 }

@@ -8,17 +8,17 @@
     &:first-child{
       @extend .clipDown;
       animation: clipDown 0.5s ease-in-out 3.25s forwards;
-      font-size: 7.5rem;
+      font-size: 5rem;
       letter-spacing: 0.5rem;
     }
     &:nth-child(2){
       @extend .clipDown;
       animation: clipDown 0.5s ease-in-out 3.75s forwards;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }
   h3{
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     &:nth-child(3){
       @extend .clipUp;
       animation: clipUp 0.5s ease-in-out 4.25s forwards;
@@ -75,7 +75,7 @@
   }
   .explore-work{
     @extend .clipUp;
-    animation: clipUp 0.5s ease-in-out 5.35s forwards;
+    animation: clipUp 0.5s ease-in-out 5.5s forwards;
     flex-direction: column;
     align-items: center;
     bottom: 0%;

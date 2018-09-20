@@ -36,8 +36,8 @@ export default class Content extends Component {
                   human centered solutions to problems.
                 </p>
                 <p>
-                  Currently at <span>iSoftStone North America</span> working on UI development and native applications somewhere in Everett ✈️
-                  I am also an Interactive Media Design student at <span>UW Bothell</span>.
+                  Currently a Front End Developer <span>iSoftStone North America</span>, working on UI development, native applications, and IoT network visualization at <span>Boeing: Everett</span> ✈️.
+                  Also an Interactive Media Design student at <span>UW Bothell</span>.
                 </p>
                 <h2>Skills —</h2>
                 <div className='skillsContainer'>
@@ -58,7 +58,7 @@ export default class Content extends Component {
                 </div>
                 <p>
                   Originally my primary focus was visual communication, but over the years technology has influenced me to the development path.
-                  My experience of collaborating with engineers to build application supports to deliver consumer experiences was one of the highlights in
+                  My experience of collaborating with engineers and building application supports to deliver consumer experiences was one of the highlights in
                   my life. It has inspired me to keep learning about design and development. Even though I am focused on the front end I also like to experiment and break some stuff in the back end.
                   When I am not breaking stuff I like to play games and eat good food :^)
                 </p>

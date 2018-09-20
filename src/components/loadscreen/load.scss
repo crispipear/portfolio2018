@@ -17,16 +17,26 @@
   0%{
     transform: translateY(0%);
   }
+  99%{
+    transform: translateY(-100%);
+    opacity: 1
+  }
   100%{
     transform: translateY(-100%);
+    opacity: 0
   }
 }
 @include keyframes(loadbottom){
   0%{
     transform: translateY(0%);
   }
+  99%{
+    transform: translateY(100%);
+    opacity: 1
+  }
   100%{
     transform: translateY(100%);
+    opacity: 0
   }
 }
 .loadscreen{

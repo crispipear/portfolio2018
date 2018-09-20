@@ -21,6 +21,8 @@
     @extend .underline;
   }
   .aboutContent{
+    @extend .fadeInBefore;
+    animation: fadeIn 0.6s ease-in-out 1.25s forwards;
     padding-top: 7.5%;
     width: 65%;
     h1{
@@ -47,10 +49,11 @@
       align-items: flex-start;
       margin-bottom: 2.5%;
       div{
+        display: flex;
+        flex-direction: column;
         width: 70%;
         span{
-          display: table;
-          margin: 0% auto 3.5% 0%;
+          margin: 0% auto 4.5% 0%;
         }
       }
       h2{
@@ -65,6 +68,8 @@
     }
   }
   .aboutImage{
+    @extend .fadeRightBefore;
+    animation: fadeRight 0.4s ease-in-out 0.75s forwards;
     width: 25%;
     text-align: center;
     p{margin-bottom: 5%}
