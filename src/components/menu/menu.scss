@@ -66,6 +66,10 @@ nav{
       }
     }
   }
+  @include laptop{
+    top: 30px;
+    left: 30px;
+  }
 }
 .close-menu {
   .menu a {
@@ -154,5 +158,8 @@ nav{
   transition: all 0.5s;
   &:hover{
     animation: navTop 0.75s ease-in-out;
+  }
+  @include laptop{
+    width: 35px
   }
 }

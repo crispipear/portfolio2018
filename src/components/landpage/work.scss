@@ -100,6 +100,10 @@
         font-size: 1rem;
         line-height: 1.75rem;
       }
+      @include laptop{
+        h2{font-size: 1.35rem}
+        p{font-size: 0.9rem; line-height: 1.5rem}
+      }
     }
     &:hover{
       .proj-thumbnail{

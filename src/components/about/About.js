@@ -59,7 +59,10 @@ export default class Content extends Component {
                 <p>
                   Originally my primary focus was visual communication, but over the years technology has influenced me to the development path.
                   My experience of collaborating with engineers and building application supports to deliver consumer experiences was one of the highlights in
-                  my life. It has inspired me to keep learning about design and development. Even though I am focused on the front end I also like to experiment and break some stuff in the back end.
+                  my life. It has inspired me to keep learning about design and development. 
+                </p>
+                <p>
+                  You can see more of my visual design work on <a href="https://dribbble.com/crispipear" target="_blank">Dribbble</a>. I also like to experiment and break some stuff in the back end.
                   When I am not breaking stuff I like to play games and eat good food :^)
                 </p>
               </div>

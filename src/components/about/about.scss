@@ -84,19 +84,24 @@
   }
   @include laptop {
     span, span a{
-      font-size: 100%!important;
+      font-size: 102.5%!important;
     }
     h1{
-      font-size: 2rem!important;
+      font-size:1.75rem!important;
     }
     .aboutContent{
       p{
-        font-size: 0.96rem!important;
-        line-height: 2rem!important;
+        font-size: 0.9rem!important;
+        line-height: 1.75rem!important;
+      }
+      a{
+        &:after, &:before{
+          bottom: 6.5px!important;
+        }
       }
     }
-    h2 {
-      font-size: 1rem!important;
+    h2, .skills span {
+      font-size: 0.925rem!important;
     }
     .aboutImage{
       margin-left: 5%;

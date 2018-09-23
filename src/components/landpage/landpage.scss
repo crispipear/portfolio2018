@@ -91,6 +91,28 @@
       transform: translateY(10%);
     }
   }
+  @include laptop{
+    h1{
+      &:first-child{
+        font-size: 3.5rem
+      }
+      &::nth-child(2){
+        font-size: 1.5rem
+      }
+    }
+    h3{
+      font-size: 1.05rem
+    }
+    .explore-about h2, .explore-work h2{
+      font-size: 0.9rem;
+    }
+    .explore-about div{
+      width: 100px
+    }
+    .explore-work div{
+      height: 100px
+    }
+  }
 }
 
 .landpagedone{

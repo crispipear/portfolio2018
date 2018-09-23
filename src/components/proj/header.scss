@@ -68,6 +68,7 @@
     }
   }
   .explore-more{
+    z-index: 5;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,6 +101,29 @@
     }
     &:hover div{
       transform: translateY(10%);
+    }
+  }
+  @include laptop{
+    .explore-more{
+      h2{
+        font-size: 0.9rem
+      }
+      div{
+        height: 75px;
+      }
+    }
+    .projHeader-image{
+      margin-left: 5%;
+      width: 40%;
+    }
+    .projHeader-info{
+      h1{
+        font-size: 2.5rem;
+      }
+      p{
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+      }
     }
   }
 }

@@ -43,9 +43,9 @@
     justify-content: space-between;
     height: auto;
     div, img{height: 100%}
-    div{width: 40%}
+    div{width: 42.5%}
     img{width: 50%; margin: 0%}
-    h1{margin: 1.5% 0% 5% 0%}
+    h1{margin: 2.5% 0% 5% 0%}
     p{margin: 5% 0%}
   }
   .block-two-center{
@@ -65,6 +65,26 @@
       position: absolute;
       top: 0;
       width: 100%;
+    }
+  }
+  @include laptop{
+    .block, .block-two, .block-two-center{
+      width: 60%!important;
+    }
+    h1{
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+    h3{
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+    }
+    p{
+      font-size: 0.9rem;
+      line-height: 1.65rem;
+    }
+    .button{
+      font-size: 0.8rem;
     }
   }
 }
