@@ -12,13 +12,11 @@
     padding-top: 7.5%;
   }
   a, span{
-    font-family: 'Ubuntu Mono';
-    font-weight: bold;
-    font-size: 105%;
     @extend .gradientText;
   }
   a{
     @extend .underline;
+    font-weight: bold;
   }
   .aboutContent{
     @extend .fadeInBefore;
@@ -54,6 +52,7 @@
         width: 70%;
         span{
           margin: 0% auto 5% 0%;
+          font-family: 'Ubuntu Mono'
         }
       }
       h2{
@@ -83,20 +82,18 @@
     }
   }
   @include laptop {
-    span, span a{
-      font-size: 102.5%!important;
-    }
     h1{
       font-size:1.75rem!important;
+      margin-bottom: 5%!important;
     }
-    .aboutContent{
+    .aboutImage, .aboutContent{
       p{
         font-size: 0.9rem!important;
         line-height: 1.75rem!important;
       }
       a{
         &:after, &:before{
-          bottom: 6.5px!important;
+          bottom: 7.5px!important;
         }
       }
     }
@@ -104,7 +101,7 @@
       font-size: 0.925rem!important;
     }
     .aboutImage{
-      margin-left: 5%;
+      margin-left: 3.5%;
       width: 22.5%;
     }
   }

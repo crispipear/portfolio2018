@@ -96,12 +96,12 @@
       &:first-child{
         font-size: 3.5rem
       }
-      &::nth-child(2){
-        font-size: 1.5rem
+      &:nth-child(2){
+        font-size: 1.75rem
       }
     }
     h3{
-      font-size: 1.05rem
+      font-size: 1rem
     }
     .explore-about h2, .explore-work h2{
       font-size: 0.9rem;

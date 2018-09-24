@@ -99,7 +99,7 @@ export default class Background extends Component {
         friction:1,
         ease: 0.075,
         spacing: 5,
-        size: 1.25,
+        size: 1,
         color: '#5888f4'
       }
 

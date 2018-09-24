@@ -86,4 +86,22 @@
       }
     }
   }
+  @include laptop{
+    .projFooter-see h1{
+      font-size: 1.25rem;
+      &:before{
+        width: 125px;
+        right: -150px;
+      }
+    }
+    .projFooter-block-container{
+      width: 45%;
+    }
+    .projFooter-block{
+      height: 90%;
+      .projFooter-block-info h1{
+        font-size: 1.15rem;
+      }
+    }
+  }
 }

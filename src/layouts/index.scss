@@ -62,7 +62,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .footer{
-  height: 12.5vh;
+  height: 15vh;
   .container{
     display: flex;
     justify-content: space-between;
@@ -81,7 +81,7 @@ h1,h2,h3,h4,h5,h6,p{
   }
   @include laptop{
     span, span a{
-      font-size: 0.9rem!important
+      font-size: 0.8rem!important
     }
   }
 }

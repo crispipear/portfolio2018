@@ -27,7 +27,7 @@ export default class Content extends Component {
                   <img src={Profile}/>
                 </div>
                 <p><a href="mailto:hiiamsuli@gmail.com">SAY HELLO</a> &#x1f4ac;</p>
-                <p><a href={Resume} target="_blank">SEE RESUME</a> &#x1f648;</p>
+                <p><a href={Resume} target="_blank">SEE RESUME</a> &#x1f31a;</p>
               </div>
               <div className='aboutContent'>
                 <h1>Hi, my name is Su Li / 李素莹</h1>
@@ -36,7 +36,7 @@ export default class Content extends Component {
                   human centered solutions to problems.
                 </p>
                 <p>
-                  Currently a Front End Developer <span>iSoftStone North America</span>, working on UI development, native applications, and IoT network visualization at <span>Boeing: Everett</span> ✈️.
+                  Currently a Front End Developer at <span>iSoftStone North America</span>, working on UI development, native applications, and IoT network visualization at <span>Boeing: Everett</span> ✈️.
                   Also an Interactive Media Design student at <span>UW Bothell</span>.
                 </p>
                 <h2>Skills —</h2>

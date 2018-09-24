@@ -37,13 +37,24 @@ const Content = () => (
       </div>
       <div className="block">
         <h3>inspiration</h3>
-        <h1>It is healthy to talk about stress.</h1>
+        <h1>Ways to visualize data</h1>
         <p>
-          We decided to focus on college students as our primary target audience. Based on our research, more than half of the college students feel overwhelmed by school and 1/3 of
-          the students were negatively impacted by stress. Stress can also lead to bigger issues such as depression, insomnia, fatigue, anxiety and more. It is important to deal with
-          stress properly before it brings more negative impacts. Study has shown that sharing thoughts is a healthy way to deal with stress.
+          We also researched other related projects that visualize thoughts and ideas using the public space.
         </p>
-        <img src={require('../data/waves/res1.png')}/>
+        <div className="block-three">
+          <div>
+            <img src={require('../data/waves/ins1.png')}/>
+            <a href="http://candychang.com/work/confessions/" target="_blank">Confessions</a>
+          </div>
+          <div>
+            <img src={require('../data/waves/ins2.png')}/>
+            <a href="http://www.notabenevisual.com/#/works/in-order-to-control/" target="_blank">In Order to Control</a>
+          </div>
+          <div>
+            <img src={require('../data/waves/ins3.png')}/>
+            <a href="https://hearingvoicesofsupport.org/" target="_blank">Hearing Voices of Support</a>
+          </div>
+        </div>
       </div>
     </section>
     <Footer page={1}/>

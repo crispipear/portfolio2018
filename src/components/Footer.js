@@ -5,7 +5,7 @@ const Content = () => (
     <div className='container'>
       <span>2018 &#169; Developed with
         <a href="https://www.gatsbyjs.org/" target="_blank">GatsbyJS</a>
-        by Su Li &#x1F60E;</span>
+        by Su Li</span>
       <span>
         <a href="https://dribbble.com/crispipear" target="_blank">DRIBBBLE</a>—
         <a href="https://codepen.io/crispipear/" target="_blank">CODEPEN</a>—

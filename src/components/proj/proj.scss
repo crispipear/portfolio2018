@@ -32,6 +32,11 @@
     font-size: 1.05rem;
     line-height: 1.75rem;
     margin: 2.5% 0%;
+    color: lighten($text, 25%);
+  }
+  a{
+    @extend .underline;
+    font-size: 1rem;
   }
   .block, .block-two, .block-two-center{
     width: 50%;
@@ -53,6 +58,26 @@
   }
   .block-two{
     align-items: flex-start;
+  }
+  .block-three{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    div, img{
+      margin: 0%;
+      height: 100%;
+      width: 32%;
+    }
+    div{
+      text-align: center;
+      a{
+        font-size: 0.85rem;
+      }
+      img{
+        width: 100%;
+      }
+    }
   }
   .block-video{
     overflow: hidden;
@@ -80,8 +105,8 @@
       line-height: 1.5rem;
     }
     p{
-      font-size: 0.9rem;
-      line-height: 1.65rem;
+      font-size: 0.85rem;
+      line-height: 1.5rem;
     }
     .button{
       font-size: 0.8rem;
