@@ -11,7 +11,7 @@ const Content = () => (
         {
           ProjectsData.map((project, key) => {
             let path
-            if(key == 0){
+            if(key == 0 || key == 1){
               path = `/${project.path}`
             }else{
               path = ''
@@ -21,7 +21,7 @@ const Content = () => (
                 <div className="proj-overlay"/>
                 <div className="proj-see">
                   <img src={Arrow}/>
-                  <h2>{key == 0 ? 'SEE PROJECT' : 'COMING SOON'}</h2>
+                  <h2>{key == 0 || key == 1 ? 'SEE PROJECT' : 'COMING SOON'}</h2>
                 </div>
                 <div className="proj-thumbnail-container">
                   <div className="proj-thumbnail" style={{backgroundImage: `url(${project.thumbnail})`}}/>

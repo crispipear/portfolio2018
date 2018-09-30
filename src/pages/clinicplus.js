@@ -102,7 +102,7 @@ const Content = () => (
       <div className="block-two">
         <div>
           <h3>reflection</h3>
-          <h1>What I did</h1>
+          <h1>My Role</h1>
           <p>
             The topic of the Independent Study was to create a design solution for a
             business problem. I have researched on the clinic work flow, stakeholders and
@@ -114,16 +114,16 @@ const Content = () => (
         </div>
         <div>
           <h3>reflection</h3>
-          <h1>What I learned</h1>
+          <h1>Challenges</h1>
           <p>
             The main challenge was being able to do project management and design individually. Outlining tasks were very important. Half way through the quarter
             I almost ran out of time trying to do research, design and learn development at the same time. I had to give up the application prototype on mobile this quarter
-            in order to focus on research and design. As for next steps, I plan on develop the application prototype with React Native.
+            in order to focus on research and design.
           </p>
         </div>
       </div>
     </section>
-    {/*<Footer page={0}/>*/}
+    {/* <Footer page={0}/> */}
   </PageTransition>
 )
 

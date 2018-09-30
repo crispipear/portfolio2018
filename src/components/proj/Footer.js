@@ -23,7 +23,6 @@ class Content extends Component{
   render(){
     let prevProj = ProjectsData[this.state.prev]
     let nextProj = ProjectsData[this.state.next]
-
     return(
       <section className='projFooter'>
         <div className='container'>

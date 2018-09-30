@@ -35,7 +35,6 @@
     color: lighten($text, 25%);
   }
   a{
-    @extend .underline;
     font-size: 1rem;
   }
   .block, .block-two, .block-two-center{

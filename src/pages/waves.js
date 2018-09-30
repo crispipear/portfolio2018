@@ -56,8 +56,55 @@ const Content = () => (
           </div>
         </div>
       </div>
+      <div className="block">
+        <h3>the solution</h3>
+        <h1>Public Installation Concept</h1>
+        <p>The installation not only visuliazes user submissions to bring the awareness of stress to the public, 
+          but also encourage others to share their thoughts. The Waves table stimulates a pool of water waves as a 
+          metaphorical representation of waves of stress. 
+          The activity of the waves depend on the selected wave level has been sent through the mobile application.</p>
+        <img src={require('../data/waves/inst1.png')}/>
+      </div>
+      <div className="block">
+        <h3>the solution</h3>
+        <h1>Mobile Application</h1>
+        <p>The mobile app acts as a gateway to allow people to share their thoughts and stress anonymously. 
+          The anonymity of the app creates a safe place that allows the users to share what is making them anxious and frustrated. 
+          In addition, the app also includes suggestions for distress methods. Users will be 
+          able to see what other "waves" are being submitted, view history and comfort messages 
+          being sent back to their own submitted waves.</p>
+        <img src={require('../data/waves/app1.png')}/>
+        <img src={require('../data/waves/logos.png')}/>
+      </div>
+      <img src={require('../data/waves/ui1.png')}/>
+      <img src={require('../data/waves/ui2.png')}/>
+      <div className="container block-video">
+        <iframe src="https://player.vimeo.com/video/272244038" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen={true}></iframe>
+      </div>
+      <div className="block-two">
+        <div>
+          <h3>reflection</h3>
+          <h1>My Role</h1>
+          <p>
+            I collborated with three other students (Jacob Hanser, Chelsea Tao, Tammy Tran) for this project. We worked together
+            to research on problems about mental health and designed a solution together. My major role was to take lead on the
+            mobile app prototype development and post video production. I was also involved in the user interface design for the mobile app.
+          </p>
+        </div>
+        <div>
+          <h3>reflection</h3>
+          <h1>Challenges</h1>
+          <p>
+            Video prototype production was more complex I have expected it to be. We had to research on a problem,
+            design a solution and produce a high fidelity video prototype over the span of 6 weeks. We spent alot of time on
+            scripting and storyboarding to make sure we have a clear direction before filming.
+            Since there is no real product, we had to figure out how to present our concept and idea of a physical
+             product with special effects. It required a lot of time to put the video together.
+          </p>
+        </div>
+      </div>
     </section>
-    <Footer page={1}/>
+    {/* <Footer page={1}/> */}
   </PageTransition>
 )
 

@@ -6,7 +6,7 @@ $key1: #515bde;
 $key2: #589ff4;
 
 .gradientText{
-  @include bgGrad(90deg, $key1, $key2)
+  @include bgGrad(90deg, $key1, $key2);
   font-weight: 400;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
