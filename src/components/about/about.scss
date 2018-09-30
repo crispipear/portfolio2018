@@ -52,7 +52,8 @@
         width: 70%;
         span{
           margin: 0% auto 5% 0%;
-          font-family: 'Ubuntu Mono'
+          font-family: 'Ubuntu Mono';
+          font-weight: bold
         }
       }
       h2{
@@ -64,6 +65,11 @@
     h2{
       font-size: 1.1rem;
       margin-bottom: 2.5%;
+    }
+    a{
+      &:after, &:before{
+        bottom: 7.5px!important;
+      }
     }
   }
   .aboutImage{
