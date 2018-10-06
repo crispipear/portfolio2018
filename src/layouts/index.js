@@ -7,9 +7,9 @@ import favicon from '../../static/favicon.ico'
 import Footer from '../components/Footer'
 import Menu from '../components/menu/Menu'
 import Up from '../components/menu/Up'
+import {SiteProvider} from '../components/SiteContext'
 import LoadScreen from '../components/loadscreen/Load'
 import Mobile from '../components/Mobile'
-import {SiteProvider} from '../components/SiteContext'
 
 
 if (typeof window !== `undefined`) {
@@ -35,7 +35,7 @@ const Layout = ({ children, data }) => (
             { rel: 'icon', href: favicon}
           ]}
         />
-          {typeof window !== `undefined` && window.innerWidth <= 750
+          {typeof window !== `undefined` && window.visualViewport.width <= 750
             ?
             <Mobile/>
             :
