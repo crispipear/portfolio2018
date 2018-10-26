@@ -8,7 +8,7 @@ const Content = () => (
   <PageTransition>
     <Header project={getProjectData("eatlixir")}/>
     <section className="projectPage">
-
+      <h1>COMING SOON</h1>
     </section>
     <Footer page={2}/>
   </PageTransition>

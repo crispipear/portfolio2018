@@ -30,7 +30,7 @@ export default class Content extends Component{
                 <p className="projHeader-overview">{this.props.project.overview}</p><br/>
                 <p><span>YEAR</span> — {this.props.project.year}</p>
                 <p><span>ROLE</span> — {this.props.project.role.join(", ")}</p>
-                <p><span>SCOPE</span> — {this.props.project.scope.join(", ")}</p>
+                <p><span>TAGS</span> — {this.props.project.tags.join(", ")}</p>
                 {this.props.project.hasOwnProperty("link")&&
                   <p><a className="button" href={this.props.project.link} target="_blank">SEE PRODUCT</a></p>
                 }

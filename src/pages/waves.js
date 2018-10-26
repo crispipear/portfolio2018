@@ -86,7 +86,7 @@ const Content = () => (
           <h3>reflection</h3>
           <h1>My Role</h1>
           <p>
-            I collborated with three other students (Jacob Hanser, Chelsea Tao, Tammy Tran) for this project. We worked together
+            I collaborated with three other students (Jacob Hanser, Chelsea Tao, Tammy Tran) for this project. We worked together
             to research on problems about mental health and designed a solution together. My major role was to take lead on the
             mobile app prototype development and post video production. I was also involved in the user interface design for the mobile app.
           </p>
@@ -104,7 +104,7 @@ const Content = () => (
         </div>
       </div>
     </section>
-    {/* <Footer page={1}/> */}
+    <Footer page={1}/>
   </PageTransition>
 )
 

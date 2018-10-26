@@ -1,8 +1,9 @@
 @import "../../styles/global";
 
 .projFooter{
-  height: 50vh;
-  background: rgba($text, 0.025);
+  height: 55vh;
+  // background: rgba($text, 0.025);
+  border: 1px solid rgba($text, 0.075);
   .container{
     height: 45vh;
     display: flex;
@@ -42,7 +43,7 @@
   }
   .projFooter-block{
     transition: all 0.35s;
-    @include box-shadow(0px, 7.5px, 30px, rgba($text, 0.15), false);
+    @include box-shadow(0px, 7.5px, 30px, rgba($text, 0.1), false);
     cursor: pointer;
     width: 47.5%;
     height: 80%;
@@ -88,7 +89,7 @@
   }
   @include laptop{
     .projFooter-see h1{
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       &:before{
         width: 125px;
         right: -150px;
@@ -100,7 +101,7 @@
     .projFooter-block{
       height: 90%;
       .projFooter-block-info h1{
-        font-size: 1.15rem;
+        font-size: 1rem;
       }
     }
   }

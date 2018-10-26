@@ -10,14 +10,8 @@ const Content = () => (
       <div className="container">
         {
           ProjectsData.map((project, key) => {
-            let path
-            if(key == 0 || key == 1){
-              path = `/${project.path}`
-            }else{
-              path = ''
-            }
             return(
-              <Link key={key} className="proj-div" to={path}>
+              <Link key={key} className="proj-div" to={`/${project.path}`}>
                 <div className="proj-overlay"/>
                 <div className="proj-see">
                   <img src={Arrow}/>

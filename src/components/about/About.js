@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import './about.scss'
 import Profile from '../../../static/avatar.jpg'
-import Resume from '../../../static/suli_resume.pdf'
 import {SiteConsumer} from '../SiteContext'
 
 const skills = [
@@ -11,7 +10,7 @@ const skills = [
   },
   {
     cat: 'Technical',
-    content: ['Javascript', 'React & React Native', 'Redux', 'jQuery', 'Node', 'HTML/CSS', '(...and more)']
+    content: ['Javascript', 'React & React Native', 'jQuery', 'Redux', 'Express.js', 'HTML/CSS', '(...and more)']
   }
 ]
 
@@ -27,7 +26,6 @@ export default class Content extends Component {
                   <img src={Profile}/>
                 </div>
                 <p><a href="mailto:lisuy97@gmail.com">lisuy97@gmail.com</a> &#x1f4ac;</p>
-                <p><a href={Resume} target="_blank">SEE RESUME</a> &#x1f31a;</p>
               </div>
               <div className='aboutContent'>
                 <h1>Hi, my name is Su Li / 李素莹</h1>
@@ -37,7 +35,7 @@ export default class Content extends Component {
                 </p>
                 <p>
                   Currently a Front End Developer at <span>iSoftStone North America</span>, working on UI development, native applications, and IoT network visualization at <span>Boeing: Everett</span> ✈️.
-                  Also an Interactive Media Design student at <span>UW Bothell</span>.
+                  I am also a senior in the department of Interactive Media Design at <span>University of Washington Bothell</span>.
                 </p>
                 <h2>Skills —</h2>
                 <div className='skillsContainer'>
@@ -57,9 +55,8 @@ export default class Content extends Component {
                 }
                 </div>
                 <p>
-                  Originally my primary focus was visual communication, but over the years technology has influenced me to the development path.
-                  You can see more of my visual design work on <a href="https://dribbble.com/crispipear" target="_blank">Dribbble</a>. I also like to experiment and break some stuff in the back end.
-                  When I am not breaking stuff I like to play games and eat good food :^)
+                  Originally my primary focus was visual communication, but over the years technology has inspired me to keep learning about development.
+                  I also like to experiment and break some stuff in the back end. When I am not breaking stuff I like to play games and eat good food :^)
                 </p>
               </div>
             </div>

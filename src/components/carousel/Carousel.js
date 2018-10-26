@@ -33,7 +33,7 @@ export default class Carousel extends Component{
         <div className='count'>
           {
             this.props.images.map((image, key) => (
-              <span key={key} index={key} className={this.state.index==key && 'countShow'}>&#x25CF;</span>
+              <span key={key} index={key} className={this.state.index==key ? 'countShow' : undefined}>&#x25CF;</span>
             ))
           }
         </div>
