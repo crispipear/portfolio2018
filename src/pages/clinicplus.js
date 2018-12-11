@@ -14,7 +14,7 @@ const Content = () => (
       <div className="block-two">
         <div>
           <h3>the problem</h3>
-          <h1>How can we improve the overall satisfaction of clinic patients?</h1>
+          <h1>How might we improve the overall satisfaction of clinic patients?</h1>
           <p>
             Research has shown that clinic patient and consumer satisfaction is tied to wait time. Excluding the actual consultation with the doctor,
             the average wait time of a typical clinic visit can take up more than an hour.

@@ -40,6 +40,9 @@
   .block, .block-two, .block-two-center{
     width: 50%;
     margin: 5% 0%;
+    b{
+      font-weight: 400
+    }
   }
   .block-two, .block-two-center{
     display: flex;

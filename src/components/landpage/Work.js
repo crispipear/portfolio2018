@@ -15,7 +15,7 @@ const Content = () => (
                 <div className="proj-overlay"/>
                 <div className="proj-see">
                   <img src={Arrow}/>
-                  <h2>{key == 0 || key == 1 ? 'SEE PROJECT' : 'COMING SOON'}</h2>
+                  <h2>SEE PROJECT</h2>
                 </div>
                 <div className="proj-thumbnail-container">
                   <div className="proj-thumbnail" style={{backgroundImage: `url(${project.thumbnail})`}}/>

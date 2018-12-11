@@ -14,7 +14,7 @@ const Content = () => (
       <div className="block-two">
         <div>
           <h3>the problem</h3>
-          <h1>Stress is also a mental health issue.</h1>
+          <h1>How might we design a gateway for stress relief?</h1>
           <p>
             Mental health is an underlying issue within our society. While depression is one of the highest cause suicidal deaths among youth,
             stress is also a mental health issue among the general public especially students. College students often feel anxious and stressed trying to balance school, work,
@@ -57,7 +57,7 @@ const Content = () => (
         </div>
       </div>
       <div className="block">
-        <h3>the solution</h3>
+        <h3>potential solution</h3>
         <h1>Public Installation Concept</h1>
         <p>The installation not only visuliazes user submissions to bring the awareness of stress to the public, 
           but also encourage others to share their thoughts. The Waves table stimulates a pool of water waves as a 
@@ -66,7 +66,7 @@ const Content = () => (
         <img src={require('../data/waves/inst1.png')}/>
       </div>
       <div className="block">
-        <h3>the solution</h3>
+        <h3>potential solution</h3>
         <h1>Mobile Application</h1>
         <p>The mobile app acts as a gateway to allow people to share their thoughts and stress anonymously. 
           The anonymity of the app creates a safe place that allows the users to share what is making them anxious and frustrated. 
