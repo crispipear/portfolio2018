@@ -8,13 +8,10 @@
     &:first-child{
       @extend .clipDown;
       animation: clipDown 0.5s ease-in-out 3.25s forwards;
-      font-size: 5rem;
-      letter-spacing: 0.5rem;
     }
     &:nth-child(2){
       @extend .clipDown;
       animation: clipDown 0.5s ease-in-out 3.75s forwards;
-      font-size: 2rem;
     }
   }
   h3{
@@ -22,7 +19,7 @@
     &:nth-child(3){
       @extend .clipUp;
       animation: clipUp 0.5s ease-in-out 4.25s forwards;
-      margin-top: 5%;
+      margin-top: 4%;
     }
     &:nth-child(4){
       @extend .clipUp;
@@ -30,7 +27,6 @@
     }
   }
   span{
-    font-family: 'Ubuntu Mono';
     @extend .gradientText
   }
   .explore-about, .explore-work{
@@ -40,7 +36,7 @@
       font-family: 'Ubuntu Mono';
       cursor: pointer;
       font-size: 1rem;
-      letter-spacing: 0.35rem;
+      letter-spacing: 0.25rem;
       transition: opacity 0.25s;
       font-weight: bold;
       @extend .gradientText
@@ -55,46 +51,10 @@
       }
     }
   }
-  .explore-about{
-    @extend .clipLeft;
-    animation: clipLeft 0.5s ease-in-out 5.25s forwards;
-    flex-direction: row;
-    align-items: center;
-    bottom: 40%;
-    right: 0%;
-    div{
-      @include bgGrad(90deg, $key1, $key2);
-      margin-left: 20px;
-      width: 125px;
-      height: 3px;
-      transition: transform 0.3s;
-    }
-    &:hover div{
-      transform: translateX(10%);
-    }
-  }
-  .explore-work{
-    @extend .clipUp;
-    animation: clipUp 0.5s ease-in-out 5.5s forwards;
-    flex-direction: column;
-    align-items: center;
-    bottom: 0%;
-    right: 15%;
-    div{
-      @include bgGrad(180deg, $key1, $key2);
-      margin-top: 20px;
-      width: 3px;
-      height: 125px;
-      transition: transform 0.3s;
-    }
-    &:hover div{
-      transform: translateY(10%);
-    }
-  }
   @include laptop{
     h1{
       &:first-child{
-        font-size: 3.5rem
+        font-size: 2rem
       }
       &:nth-child(2){
         font-size: 1.75rem
@@ -102,15 +62,6 @@
     }
     h3{
       font-size: 1rem
-    }
-    .explore-about h2, .explore-work h2{
-      font-size: 0.9rem;
-    }
-    .explore-about div{
-      width: 100px
-    }
-    .explore-work div{
-      height: 100px
     }
   }
 }

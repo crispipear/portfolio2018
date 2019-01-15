@@ -11,7 +11,7 @@ export default [
      "des": "Optimizes clinic management and improves patient's clinic experience.",
      "path": "clinicplus",
      "tags": ["UI/UX Design", "Product Design", "App Prototype", "React Native", "Express.js"],
-     "role": ["UI/UX Designer", "Fullstack Developer"],
+     "role": ["UI/UX Designer", "Full Stack Developer"],
      "year": "2018",
      "thumbnail": clinic,
      "overview": "A technological system designed to optimize clinic management to improve the clinic experience of the patients. It utilizes data transfer between smart devices in the clinic systems to improve the clinic workflow efficiency, therefore improves the overall experience for the patients."

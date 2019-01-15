@@ -99,16 +99,20 @@ const Content = () => (
           </p>
         </div>
       </div>
+      <div className="container block-video">
+        <iframe src="https://player.vimeo.com/video/306606438" frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen={true}></iframe>
+      </div>
       <div className="block-two">
         <div>
           <h3>reflection</h3>
           <h1>My Role</h1>
           <p>
             The topic of the Independent Study was to create a design solution for a
-            business problem. I have researched on the clinic work flow, stakeholders and
+            business problem. For phase one, I have researched on the clinic work flow, stakeholders and
             statistics for a better understanding in the general situation of a clinic visit experience.
-            After I have outlined the potential solution, I began my work on designing the user
-            experience and user interface for the mobile application.
+            For phase two I was responsible to develop a simple server that can support simple data requests 
+            between mobile app and the web app, and also build out the mobile app user interface
+            with basic functionalities.
           </p>
           <a className="button" href="http://students.washington.edu/rice74/bis398/wordpress/" target="_blank">PROCESS DOC</a>
         </div>
@@ -116,9 +120,9 @@ const Content = () => (
           <h3>reflection</h3>
           <h1>Challenges</h1>
           <p>
-            The main challenge was being able to do project management and design individually. Outlining tasks were very important. Half way through the quarter
-            I almost ran out of time trying to do research, design and learn development at the same time. I had to give up the application prototype on mobile this quarter
-            in order to focus on research and design.
+            The main challenge of the first quarter was being able to do project management and design individually. 
+            I had problem with outlining tasks needed to be done for phase one. For the second quarter, the primary challenge was
+            learning Express.js to build a simple server while building out the mobile app prototype in React Native.
           </p>
         </div>
       </div>

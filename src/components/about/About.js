@@ -10,7 +10,7 @@ const skills = [
   },
   {
     cat: 'Technical',
-    content: ['Javascript', 'React & React Native', 'jQuery', 'Redux', 'Express.js', 'HTML/CSS', '(...and more)']
+    content: ['JavaScript', 'React & React Native', 'jQuery', 'Express.js', 'HTML/CSS', '(...and more)']
   }
 ]
 
@@ -28,16 +28,15 @@ export default class Content extends Component {
                 <p><a href="mailto:lisuy97@gmail.com">lisuy97@gmail.com</a> &#x1f4ac;</p>
               </div>
               <div className='aboutContent'>
-                <h1>Hi, my name is Su Li / 李素莹</h1>
                 <p>
-                  I am a <span>Front End Developer and UX Designer</span> from the Greater Seattle Area. Focused on building beautiful products and designing user experiences that offers efficient
-                  human centered solutions to problems.
+                  I am a <span>Front End Engineer/Developer</span> and <span>UX Designer</span> from the Greater Seattle Area. Focused on creating beautiful products, building intuitive user interfaces and designing user experiences that provide efficient
+                  human-centered solutions.
                 </p>
                 <p>
                   Currently a Front End Developer at <span>iSoftStone North America</span>, working on UI development, native applications, and IoT network visualization at <span>Boeing: Everett</span> ✈️.
-                  I am also a senior in the department of Interactive Media Design at <span>University of Washington Bothell</span>.
+                  I am also a senior in the department of Interactive Media Design at <span>University of Washington Bothell</span> with concentrations in Front End Development and UI/UX Design.
                 </p>
-                <h2>Skills —</h2>
+                <h2>I am experienced with —</h2>
                 <div className='skillsContainer'>
                 {
                   skills.map((skill, key) => (

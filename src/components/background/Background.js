@@ -129,7 +129,7 @@ export default class Background extends Component {
     }
 
     const init = () => {
-      reference.drawImage(image, logoLocation.x*1.35, logoLocation.y)
+      reference.drawImage(image, logoLocation.x*1.75, logoLocation.y)
       var pixels = reference.getImageData(0, 0, this.state.windowWidth, this.state.windowHeight).data
       var index
       for (var y = 0; y < this.state.windowHeight; y += particleAttr.spacing) {

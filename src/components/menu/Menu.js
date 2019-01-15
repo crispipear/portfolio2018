@@ -6,27 +6,27 @@ import {scrollTo} from '../../utils'
 
 export default class Menu extends Component {
   state = {
-    active: false
+    workPos: null
+  }
+  componentDidMount(){
+    this.setState({
+       workPos: document.querySelector('.work').offsetTop + 50
+    })
   }
   _clickLink = () => {
-    this.setState({
-      active: false
-    })
     scrollTo(0, 0)
   }
-  _toggleMenu = () => {
-    this.setState({
-      active: !this.state.active
-    })
+  _clickWork = () => {
+    setTimeout(()=>{scrollTo(0, this.state.workPos)}, 600)
   }
   render(){
     return (
-      <nav className={this.state.active?'open-menu':'close-menu'}>
-        <div onClick={this._toggleMenu} className="burger"><span></span><span></span><span></span></div>
-        <div className="menu">
+      <nav>
+          <span className="topLine"></span>
+          <span className="bottomLine"></span>
           <Link to="/" onClick={this._clickLink}>HOME</Link>
+          {window.location.pathname == '/' ? <a onClick={this._clickWork}>WORK</a> : <Link to="/" onClick={this._clickWork}>WORK</Link>}
           <Link to="/about" onClick={this._clickLink}>ABOUT</Link>
-        </div>
       </nav>
     )
   }

@@ -3,7 +3,7 @@ import React from 'react'
 const Content = () => (
   <section className='footer'>
     <div className='container'>
-      <span>2018 &#169; Su Li - Front End Developer & UX Designer</span>
+      <span>2019 &#169; Su Li - Front End Engineer &amp; UX Designer</span>
       <span>
         <a href="https://linkedin.com/in/suyingli/" target="_blank">LINKEDIN</a><span>—</span>
         <a href="https://dribbble.com/crispipear" target="_blank">DRIBBBLE</a><span>—</span>
