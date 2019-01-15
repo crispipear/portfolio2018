@@ -2,7 +2,7 @@
   "name": "syli.me",
   "description": "Personal portfolio website built with GatsbyJS",
   "version": "1.0.0",
-  "author": "Su Li <hiiamsuli@gmail.com>",
+  "author": "Su Li <lisuy97@gmail.com>",
   "dependencies": {
     "gatsby": "^1.9.277",
     "gatsby-link": "^1.6.46",
