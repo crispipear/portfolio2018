@@ -19,13 +19,16 @@ export default class Menu extends Component {
   _clickWork = () => {
     setTimeout(()=>{scrollTo(0, this.state.workPos)}, 600)
   }
+  _getPathName = () => {
+    return window.location.pathname
+  }
   render(){
     return (
       <nav>
           <span className="topLine"></span>
           <span className="bottomLine"></span>
           <Link to="/" onClick={this._clickLink}>HOME</Link>
-          {window.location.pathname == '/' ? <a onClick={this._clickWork}>WORK</a> : <Link to="/" onClick={this._clickWork}>WORK</Link>}
+          {this._getPathName == '/' ? <a onClick={this._clickWork}>WORK</a> : <Link to="/" onClick={this._clickWork}>WORK</Link>}
           <Link to="/about" onClick={this._clickLink}>ABOUT</Link>
       </nav>
     )
