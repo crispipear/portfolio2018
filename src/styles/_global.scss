@@ -1,9 +1,12 @@
 @import "../styles/mixins";
 
-$bg: #fefefe;
-$text: #2d2d2d;
-$key1: #515bde;
-$key2: #589ff4;
+$bg: #f8f8f8;
+$text: rgba(255,255,255, 0.5);
+$key1: #ffffff;
+$key2: #ffffff;
+
+// $key1: #8e793e;
+// $key2: #ad974f;
 
 .gradientText{
   @include bgGrad(90deg, $key1, $key2);

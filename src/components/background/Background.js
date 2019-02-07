@@ -100,7 +100,7 @@ export default class Background extends Component {
         ease: 0.075,
         spacing: 5,
         size: 1,
-        color: '#5888f4'
+        color: '#42413d'
       }
 
     function Particle(x, y) {
