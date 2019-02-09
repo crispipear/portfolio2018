@@ -11,15 +11,14 @@
     align-items: flex-start;
     padding-top: 7.5%;
   }
-  a, span{
-    @extend .gradientText;
-  }
-  a{
-    @extend .underline;
-    font-weight: bold;
+  span{
+    color: white!important;
   }
   .aboutContent{
     @extend .fadeInBefore;
+    p, h2{
+      color: lighten($text2, 10%)!important;
+    }
     animation: fadeIn 0.6s ease-in-out 1.25s forwards;
     padding-top: 7.5%;
     width: 65%;
@@ -27,7 +26,6 @@
       font-family: 'Ubuntu Mono', '微软雅黑';
       font-size: 2.25rem;
       margin-bottom: 7.5%;
-      @extend .gradientText
     }
     p{
       font-size: 1.1rem;
@@ -52,8 +50,6 @@
         width: 70%;
         span{
           margin: 0% auto 5% 0%;
-          font-family: 'Ubuntu Mono';
-          font-weight: bold
         }
       }
       h2{
@@ -78,7 +74,6 @@
     animation: fadeRight 0.4s ease-in-out 0.75s forwards;
     width: 25%;
     text-align: center;
-    p{margin-bottom: 5%}
     .img{
       img{
         @include box-shadow(5px, 7.5px, 15px, rgba($text, 0.15), false);
@@ -86,6 +81,12 @@
       }
       margin-bottom: 17.5%;
       @extend .frame;
+    }
+    p{
+      margin-top: -2.5%;
+    }
+    a{
+      color: $text2!important;
     }
   }
   @include laptop {

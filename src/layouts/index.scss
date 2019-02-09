@@ -24,7 +24,6 @@ body{
   background: $bg;
   margin: 0%;
   overflow-x: hidden;
-  background-color: black
 }
 body::-webkit-scrollbar {
   width: 0.5em;
@@ -49,7 +48,7 @@ section{
 .container{
   position: relative;
   width: 100%;
-  max-width: 1250px;
+  max-width: 1400px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -64,28 +63,29 @@ h1,h2,h3,h4,h5,h6,p{
 }
 
 .footer{
-  height: 15vh;
-  .container{
-    display: flex;
-    justify-content: space-between;
+  @extend .clipLeft;
+  animation: clipLeft 0.35s ease-in-out 6s forwards;
+  position: fixed;
+  bottom: 3vh;
+  right: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  .bottomLine{
+    width: 1px;
+    height: 15vh;
+    background-color: $text2;
   }
-  span, span a{
-    font-size: 1rem;
-    letter-spacing: 0.075rem;
-  }
-  span span{
-    margin: 0% 5px;
-  }
-  span a{
-    @extend.gradientText;
-    transition: opacity 0.25s;
-    font-weight: bold;
-    @extend .underline;
-    padding-bottom: 3px;
-  }
-  @include laptop{
-    span, span a{
-      font-size: 0.8rem!important
+  a *{
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: $text2;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover{
+      opacity: 0.5;
     }
   }
 }

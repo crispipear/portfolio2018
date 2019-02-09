@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "author": "Su Li <lisuy97@gmail.com>",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.14",
+    "@fortawesome/free-brands-svg-icons": "^5.7.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "gatsby": "^1.9.279",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-page-transitions": "^1.0.7",

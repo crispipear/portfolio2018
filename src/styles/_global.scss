@@ -1,19 +1,21 @@
 @import "../styles/mixins";
 
 $bg: #f8f8f8;
-$text: rgba(255,255,255, 0.5);
-$key1: #ffffff;
-$key2: #ffffff;
+$text: #1b1717;
+$text2: #868180;
+$key1: #cf9019;
+$key2: #7A392C;
 
 // $key1: #8e793e;
 // $key2: #ad974f;
 
 .gradientText{
-  @include bgGrad(90deg, $key1, $key2);
-  font-weight: 400;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  // @include bgGrad(90deg, $key1, $key2);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
   display: inline-block;
+  color: $key1;
+  font-weight: 400;
 }
 
 .button{
@@ -23,11 +25,11 @@ $key2: #ffffff;
   transition: all 0.35s;
   padding: 1% 2.5%;
   margin: 2.5% 0%;
-  border: 2px solid transparent;
-  border-image: linear-gradient(to right, $key1, $key2);
-  -webkit-border-image: -webkit-linear-gradient(left, $key1, $key2);
-  border-image-slice: 1;
-  -webkit-border-image-slice: 1;
+  border: 2px solid $key1;
+  // border-image: linear-gradient(to right, $key1, $key2);
+  // -webkit-border-image: -webkit-linear-gradient(left, $key1, $key2);
+  // border-image-slice: 1;
+  // -webkit-border-image-slice: 1;
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
@@ -40,7 +42,8 @@ $key2: #ffffff;
     left: 0;
     right: 0;
     height: 100%;
-    @include bgGrad(90deg, $key1, $key2);
+    // @include bgGrad(90deg, $key1, $key2);
+    background: $key1;
     transform: translateY(-101%)
   }
   &:hover{
@@ -107,10 +110,11 @@ $key2: #ffffff;
     content: "";
     width: 100%;
     height: 100%;
-    border-image: linear-gradient(to top, $key1 0%, $key2 100%);
-    border-image-slice: 1;
-    border-style: solid;
-    border-width: 2px;
+    border: white solid 2px;
+    // border-image: linear-gradient(to top, $key1 0%, $key2 100%);
+    // border-image-slice: 1;
+    // border-style: solid;
+    // border-width: 2px;
     position: absolute;
     left: -15px;
     bottom: -15px;
@@ -120,10 +124,11 @@ $key2: #ffffff;
     content: "";
     width: 100%;
     height: 100%;
-    border-image: linear-gradient(to bottom, $key1 0%, $key2 100%);
-    border-image-slice: 1;
-    border-style: solid;
-    border-width: 1.5px;
+    border: $text2 solid 1px;
+    // border-image: linear-gradient(to bottom, $key1 0%, $key2 100%);
+    // border-image-slice: 1;
+    // border-style: solid;
+    // border-width: 1.5px;
     position: absolute;
     right: -15px;
     top: -15px;

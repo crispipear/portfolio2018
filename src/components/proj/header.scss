@@ -11,24 +11,6 @@
   .projHeader-image, .projHeader-info{
     height: 75vh;
   }
-  .projHeader-block1{
-    position: absolute;
-    width: 25%;
-    height: 50%;
-    background: rgba($text, 0.075);
-    left: 12.5%;
-    bottom: 5%;
-    z-index: -1;
-  }
-  .projHeader-block2{
-    position: absolute;
-    width: 30%;
-    height: 50%;
-    background: rgba($text, 0.035);
-    right: 0%;
-    top: 0%;
-    z-index: -1;
-  }
   .projHeader-image{
     width: 45%;
     @include box-shadow(5px, 7.5px, 40px, rgba($text, 0.15), false);

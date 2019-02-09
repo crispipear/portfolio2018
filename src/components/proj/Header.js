@@ -21,8 +21,6 @@ export default class Content extends Component{
               <h2>MORE</h2>
               <div/>
             </div>
-            <div className='projHeader-block1'/>
-            <div className='projHeader-block2'/>
             <div className='container'>
               <div className='projHeader-image' style={Object.assign({backgroundImage: `url(${this.props.project.thumbnail})`}, scroll('.projHeader-image'))}/>
               <div className="projHeader-info">

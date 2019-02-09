@@ -3,8 +3,12 @@
 
 .landpage{
   position: relative;
+  h1, h3{
+    color: $text2!important;
+  }
   h1{
     font-weight: 300;
+    font-size: 2.5rem;
     &:first-child{
       @extend .clipDown;
       animation: clipDown 0.5s ease-in-out 3.25s forwards;
@@ -19,7 +23,7 @@
     &:nth-child(3){
       @extend .clipUp;
       animation: clipUp 0.5s ease-in-out 4.25s forwards;
-      margin-top: 4%;
+      margin-top: 3.5%;
     }
     &:nth-child(4){
       @extend .clipUp;
@@ -27,29 +31,8 @@
     }
   }
   span{
-    @extend .gradientText
-  }
-  .explore-about, .explore-work{
-    position: absolute;
-    display: flex;
-    h2{
-      font-family: 'Ubuntu Mono';
-      cursor: pointer;
-      font-size: 1rem;
-      letter-spacing: 0.25rem;
-      transition: opacity 0.25s;
-      font-weight: bold;
-      @extend .gradientText
-    }
-    div{
-      cursor: pointer;
-      background: $key1;
-    }
-    &:hover{
-      h2{
-        opacity: 0.5
-      }
-    }
+    color: white!important;
+    font-weight: 400;
   }
   @include laptop{
     h1{

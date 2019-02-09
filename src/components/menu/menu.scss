@@ -1,41 +1,31 @@
 @import "../../styles/global";
-
 nav{
   @extend .clipRight;
   animation: clipRight 0.35s ease-in-out 5.75s forwards;
   position: fixed;
-  left: 5vh;
-  top: 5vh;
-  height: 90vh;
+  left: 3vh;
+  top: 3vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 10;
   a{
+    color: $text2!important;
     font-size: 0.9rem;
     writing-mode: vertical-rl;
     text-orientation: upright;
     font-family: 'Ubuntu Mono';
-    transition: all 0.25s;
+    transition: all 0.2s;
+    margin-top: 30px;
     &:hover{
       opacity: 0.5;
     }
-    &:nth-child(3), &:nth-child(4){
-      padding-bottom: 30px
-    }
-  }
-  .topLine, .bottomLine{
-    width: 1px;
-    height: 20vh;
-    background-color: rgba($text, 0.5);
-    position: absolute;
   }
   .topLine{
-    top: 0
-  }
-  .bottomLine{
-    bottom: 0
+    width: 1px;
+    height: 15vh;
+    background-color: $text2;
   }
 }
 @include keyframes(navTop){

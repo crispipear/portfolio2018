@@ -40,11 +40,11 @@ const Layout = ({ children, data }) => (
             <Mobile/>
             :
             <SiteProvider>
-              {/* <LoadScreen/> */}
+              <LoadScreen/>
               {/* <Up/> */}
-              {/* <Menu/> */}
+              <Menu/>
               {children()}
-              {/* <Footer/> */}
+              <Footer/>
             </SiteProvider>
          }
     </div>

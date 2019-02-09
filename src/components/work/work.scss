@@ -63,7 +63,8 @@
       width: 100%;
     }
     .proj-overlay{
-      @include bgGrad(135deg, $key1, $key2);
+      // @include bgGrad(135deg, $key1, $key2);
+      background-color: rgba($text, 0.9);
       transition: opacity 0.35s;
       z-index: 1;
       opacity: 0;

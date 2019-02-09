@@ -13,8 +13,8 @@ class ThreeScene extends Component{
     const height = window.innerHeight
 
     this.clock = new THREE.Clock()
-    this.renderer = new THREE.WebGLRenderer( { alpha: true })
-    this.renderer.setClearColor('#000000', 0 );
+    this.renderer = new THREE.WebGLRenderer()
+    // this.renderer.setClearColor('#000000', 0 );
     this.renderer.setSize(width, height)
     this.scene = new THREE.Scene()
     this.camera = new THREE.PerspectiveCamera(
@@ -34,7 +34,8 @@ class ThreeScene extends Component{
     const smokeMaterial = new THREE.MeshLambertMaterial({
         color: '#ff4916',
         map: smokeTexture,
-        transparent: true
+        transparent: true,
+        opacity: 0.25
     })
     const smokeGeometry = new THREE.PlaneGeometry(300,300)
     this.smokeParticles = []
@@ -42,8 +43,8 @@ class ThreeScene extends Component{
     for(let p = 0; p < 125; p++){
         let particle = new THREE.Mesh(smokeGeometry, smokeMaterial)
         particle.position.set(
-            Math.random() * 600 - 250,
-            Math.random() * 600 - 250,
+            Math.random() * 450 - 200,
+            Math.random() * 450 - 200,
             Math.random() * 1000 - 100
         )
         particle.rotation.z = Math.random() * 360

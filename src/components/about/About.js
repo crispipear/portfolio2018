@@ -25,7 +25,7 @@ export default class Content extends Component {
                 <div className='img'>
                   <img src={Profile}/>
                 </div>
-                <p><a href="mailto:lisuy97@gmail.com">lisuy97@gmail.com</a> &#x1f4ac;</p>
+                <p><a href="mailto:lisuy97@gmail.com">lisuy97@gmail.com</a></p>
               </div>
               <div className='aboutContent'>
                 <p>
@@ -56,6 +56,9 @@ export default class Content extends Component {
                 <p>
                   Originally my primary focus was visual communication, but over the years technology has inspired me to keep learning about development.
                   I also like to experiment and break some stuff in the back end. When I am not breaking stuff I like to play games and eat good food :^)
+                </p>
+                <p>
+                  This site was built with GatsbyJS with a sprinkle of three.js ✨
                 </p>
               </div>
             </div>

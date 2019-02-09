@@ -1,23 +1,25 @@
 import React, {Component} from 'react'
 import './menu.scss'
 import Link from 'gatsby-link'
-import {scrollTo} from '../../utils'
 
+const menuItems = [
+  {
+    path: "/",
+    name: "HOME"
+  },
+  {
+    path: "/work",
+    name: "WORK"
+  },
+  {
+    path: "/about",
+    name: "ABOUT"
+  }
+]
 
 export default class Menu extends Component {
-  state = {
-    workPos: null
-  }
-  componentDidMount(){
-    this.setState({
-       workPos: document.querySelector('.work').offsetTop + 50
-    })
-  }
   _clickLink = () => {
     scrollTo(0, 0)
-  }
-  _clickWork = () => {
-    setTimeout(()=>{scrollTo(0, this.state.workPos)}, 600)
   }
   _getPathName = () => {
     return window.location.pathname
@@ -26,10 +28,11 @@ export default class Menu extends Component {
     return (
       <nav>
           <span className="topLine"></span>
-          <span className="bottomLine"></span>
-          <Link to="/" onClick={this._clickLink}>HOME</Link>
-          {this._getPathName == '/' ? <a onClick={this._clickWork}>WORK</a> : <Link to="/" onClick={this._clickWork}>WORK</Link>}
-          <Link to="/about" onClick={this._clickLink}>ABOUT</Link>
+          {
+            menuItems.map((m, key) => 
+              <Link key={key} to={m.path} onClick={this._clickLink} className={this._getPathName() == '/'?"menu_home":"menu_pages"}>{m.name}</Link>
+            )
+          }
       </nav>
     )
   }
