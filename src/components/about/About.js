@@ -5,12 +5,12 @@ import {SiteConsumer} from '../SiteContext'
 
 const skills = [
   {
-    cat: 'General',
-    content: ['Front End Development', 'UI/UX Design', 'Application Prototyping', 'Video Prototyping', 'Design/Art Direction']
+    cat: "The things I am good at —",
+    content: ['Front End Development', 'Web/App Development', 'UI/UX Design', 'Rapid Prototyping', 'Video Production']
   },
   {
-    cat: 'Technical',
-    content: ['JavaScript', 'React & React Native', 'jQuery', 'Express.js', 'HTML/CSS', '(...and more)']
+    cat: "Few things in my skillbox —",
+    content: ['JavaScript', 'HTML', 'CSS/SCSS', 'React.js', 'React Native', 'Node.js', 'jQuery']
   }
 ]
 
@@ -28,16 +28,17 @@ export default class Content extends Component {
                 <p><a href="mailto:lisuy97@gmail.com">lisuy97@gmail.com</a></p>
               </div>
               <div className='aboutContent'>
+                <h1>Yes, I design and I code</h1>
                 <p>
-                  I am a <span>Front End Engineer/Developer</span> and <span>UX Designer</span> from the Greater Seattle Area. Focused on creating beautiful products, building intuitive user interfaces and designing user experiences that provide efficient
+                  I am a <span>Front End Developer</span> and <span>UX Designer</span> based in the Greater Seattle Area. Focused on creating beautiful products, building intuitive user interfaces and designing user experiences that provide efficient
                   human-centered solutions.
                 </p>
                 <p>
-                  Currently a Front End Developer at <span>iSoftStone North America</span>, working on UI development, native applications, and IoT network visualization at <span>Boeing: Everett</span> ✈️.
-                  I am also a senior in the department of Interactive Media Design at <span>University of Washington Bothell</span> with concentrations in Front End Development and UI/UX Design.
+                  Currently at <span>iSoftStone North America</span>, working on UI development, native applications, and IoT network visualization at <span>Boeing: Everett</span> ✈️.
                 </p>
-                <h2>I am experienced with —</h2>
-                <div className='skillsContainer'>
+                <p>
+                  I am also a senior in the department of Interactive Media Design at <span>University of Washington</span> with concentrations in Front End Development and UI/UX Design.
+                </p>
                 {
                   skills.map((skill, key) => (
                     <div className='skills' key={key}>
@@ -52,10 +53,15 @@ export default class Content extends Component {
                     </div>
                   ))
                 }
-                </div>
+
+                <h1>My story</h1>
                 <p>
-                  Originally my primary focus was visual communication, but over the years technology has inspired me to keep learning about development.
-                  I also like to experiment and break some stuff in the back end. When I am not breaking stuff I like to play games and eat good food :^)
+                  I started out as a visual designer during the beginning of college. As I learned more in the topics relative to design, I was intrigued by the idea of designing 
+                  solutions for problems through technology, which inspired me to explore the human-centered design and engineering aspect.
+                </p>
+                <p>
+                  Over the years I find myself enjoy coding more and being able to build out my own designs is fun. I also like to experiment with data-driven projects and break some stuff in the back end. 
+                  When I am not breaking stuff I like to play games and eat good food :^)
                 </p>
                 <p>
                   This site was built with GatsbyJS with a sprinkle of three.js ✨

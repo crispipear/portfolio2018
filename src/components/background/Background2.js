@@ -77,7 +77,7 @@ animate = () => {
 evolve = () => {
     let sp = this.smokeParticles.length
     while (sp--){
-        this.smokeParticles[sp].rotation.z += (this.delta * 0.25)
+        this.smokeParticles[sp].rotation.z += (this.delta * 0.35)
     }
 }
 renderScene = () => {

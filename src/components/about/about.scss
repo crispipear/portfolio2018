@@ -4,10 +4,11 @@
   min-height: 100vh;
   height: auto;
   align-items: flex-start;
+  padding-bottom: 5%;
   .container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     padding-top: 7.5%;
   }
@@ -15,53 +16,49 @@
     color: white!important;
   }
   .aboutContent{
+    pointer-events: none;
     @extend .fadeInBefore;
     p, h2{
       color: lighten($text2, 10%)!important;
     }
-    animation: fadeIn 0.6s ease-in-out 1.25s forwards;
-    padding-top: 7.5%;
-    width: 65%;
+    animation: fadeIn 0.75s ease-in-out 0.75s forwards;
+    padding-top: 5%;
+    margin-left: 32.5%;
+    width: 47.5%;
     h1{
-      font-family: 'Ubuntu Mono', '微软雅黑';
       font-size: 2.25rem;
-      margin-bottom: 7.5%;
+      color: white;
+      margin: 12.5% 0%;
+      font-weight: 300;
     }
     p{
       font-size: 1.1rem;
       line-height: 2.25rem;
       margin-bottom: 5%;
     }
-    .skillsContainer{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
     .skills{
-      width: 48%;
+      width: 100%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
       margin-bottom: 2.5%;
       div{
-        display: flex;
-        flex-direction: column;
-        width: 70%;
         span{
-          margin: 0% auto 5% 0%;
+          letter-spacing: 0.075rem;
+          margin: 1.5%;
+          display: inline-block;
+          font-weight: 300;
+          padding: 2.5%;
+          font-size: 0.9rem;
+          color: rgba(white, 0.9)!important;
+          background-color: rgba($key2, 0.5);
         }
       }
       h2{
-        width: 20%;
-        margin: 0%;
-        font-size: 1rem;
-        opacity: 0.5;
+        margin: 0% 0% 2.5% 0%;
+        font-size: 0.9rem;
       }
-    }
-    h2{
-      font-size: 1.1rem;
-      margin-bottom: 2.5%;
     }
     a{
       &:after, &:before{
@@ -70,9 +67,12 @@
     }
   }
   .aboutImage{
-    @extend .fadeRightBefore;
-    animation: fadeRight 0.4s ease-in-out 0.75s forwards;
-    width: 25%;
+    position: fixed;
+    left: 17.5%;
+    width: 20vw;
+    height: 20vw;
+    @extend .fadeInBefore;
+    animation: fadeIn 0.65s ease-in-out 0.5s forwards;
     text-align: center;
     .img{
       img{
@@ -87,6 +87,10 @@
     }
     a{
       color: $text2!important;
+      transition: all 0.2s;
+      &:hover{
+        opacity: 0.5;
+      }
     }
   }
   @include laptop {
@@ -105,12 +109,8 @@
         }
       }
     }
-    h2, .skills span {
-      font-size: 0.925rem!important;
-    }
-    .aboutImage{
-      margin-left: 3.5%;
-      width: 22.5%;
+    .skills span {
+      font-size: 0.8rem!important;
     }
   }
 }

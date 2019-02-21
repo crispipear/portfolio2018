@@ -19,6 +19,7 @@
     @extend .gradientText;
     font-weight: 300;
     margin: -3% 0%;
+    opacity: 0.75;
   }
   h1{
     font-weight: 400;
@@ -103,7 +104,7 @@
       line-height: 1.75rem;
     }
     h3{
-      font-size: 1.1rem;
+      font-size: 1rem;
       line-height: 1.5rem;
     }
     p{

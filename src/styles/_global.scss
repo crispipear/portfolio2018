@@ -211,7 +211,7 @@ $key2: #7A392C;
 }
 
 .fadeInBefore{
-  transform: translateY(25%);
+  transform: translateY(15%);
   opacity: 0;
 }
 .fadeRightBefore{
@@ -220,7 +220,7 @@ $key2: #7A392C;
 }
 @keyframes fadeIn{
   from{
-    transform: translateY(25%);
+    transform: translateY(15%);
     opacity: 0;
   }
   to{
