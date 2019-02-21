@@ -22,7 +22,7 @@ export default class Menu extends Component {
     scrollTo(0, 0)
   }
   _getPathName = () => {
-    return window.location.pathname
+    return typeof document !== `undefined` && window.location.pathname
   }
   render(){
     return (

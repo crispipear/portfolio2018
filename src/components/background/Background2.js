@@ -87,7 +87,7 @@ render(){
     return(
       <div
         className="smokeBg"
-        style={{ width: window.innerWidth, height: window.innerHeight, zIndex: -1 }}
+        style={this.state && { width: this.state.innerWidth, height: this.state.innerHeight, zIndex: -1 }}
         ref={(mount) => { this.mount = mount }}
       />
     )
