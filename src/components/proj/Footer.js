@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import './footer.scss'
 import {SiteConsumer} from '../SiteContext'
 import ProjectsData from '../../data/projects'
-import Arrow from '../../../static/arrow_light.svg'
+import Arrow from '../../../static/arrow_dark.svg'
 import Link from 'gatsby-link'
 import {scrollTo} from '../../utils'
 

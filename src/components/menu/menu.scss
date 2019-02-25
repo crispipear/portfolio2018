@@ -19,7 +19,7 @@ nav{
     transition: all 0.2s;
     margin-top: 30px;
     &:hover{
-      opacity: 0.5;
+      color: $key1!important;
     }
   }
   .topLine{

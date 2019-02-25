@@ -21,7 +21,7 @@ body{
   min-width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
-  background: $bg;
+  background: $key2;
   margin: 0%;
   overflow-x: hidden;
 }
@@ -84,8 +84,8 @@ h1,h2,h3,h4,h5,h6,p{
     color: $text2;
     cursor: pointer;
     transition: all 0.2s;
-    &:hover{
-      opacity: 0.5;
+    &:hover path{
+      fill: $key1!important;
     }
   }
 }

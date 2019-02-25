@@ -1,6 +1,7 @@
 @import "../../styles/global";
 
 .about{
+  background-color: $key2;
   min-height: 100vh;
   height: auto;
   align-items: flex-start;
@@ -19,7 +20,7 @@
     pointer-events: none;
     @extend .fadeInBefore;
     p, h2{
-      color: lighten($text2, 10%)!important;
+      color: $text3!important;
     }
     animation: fadeIn 0.75s ease-in-out 0.75s forwards;
     padding-top: 5%;
@@ -28,7 +29,7 @@
     h1{
       font-size: 2.25rem;
       color: white;
-      margin: 12.5% 0%;
+      margin: 15% 0% 7.5% 0%;
       font-weight: 300;
     }
     p{
@@ -44,15 +45,17 @@
       align-items: flex-start;
       margin-bottom: 2.5%;
       div{
-        span{
-          letter-spacing: 0.075rem;
-          margin: 1.5%;
+        .skills-block{
+          margin: 1%;
           display: inline-block;
-          font-weight: 300;
           padding: 2.5%;
+          background-color: rgba(darken($key1, 10%), 0.75);
+        }
+        span{
           font-size: 0.9rem;
+          font-weight: 300;
+          letter-spacing: 0.075rem;
           color: rgba(white, 0.9)!important;
-          background-color: rgba($key2, 0.5);
         }
       }
       h2{
@@ -74,19 +77,27 @@
     @extend .fadeInBefore;
     animation: fadeIn 0.65s ease-in-out 0.5s forwards;
     text-align: center;
+    @extend .frame;
     .img{
       img{
         @include box-shadow(5px, 7.5px, 15px, rgba($text, 0.15), false);
         max-width: 100%;
       }
+      .img-norm, .img-alt{
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .img-alt{
+        transition: opacity 0.15s;
+      }
       margin-bottom: 17.5%;
-      @extend .frame;
     }
     p{
       margin-top: -2.5%;
     }
     a{
-      color: $text2!important;
+      color: $text3!important;
       transition: all 0.2s;
       &:hover{
         opacity: 0.5;

@@ -6,7 +6,7 @@ import PageTransition from 'gatsby-plugin-page-transitions';
 
 const About = () => (
   <PageTransition>
-    <Background/>
+    {/* <Background/> */}
     <Content/>
   </PageTransition>
 )

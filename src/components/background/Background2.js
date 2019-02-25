@@ -4,17 +4,22 @@ import SmokeTexturePic from './smoke.png'
 import './background.scss'
 
 class ThreeScene extends Component{
-  componentDidMount(){
-    this.setState({
+  constructor(){
+    super()
+    if(typeof document !== `undefined`){
+      this.state = {
         windowWidth: window.innerWidth,
         windowHeight: window.innerHeight
-    })
+      }
+    }
+  }
+  componentDidMount(){
     const width = window.innerWidth
     const height = window.innerHeight
 
     this.clock = new THREE.Clock()
-    this.renderer = new THREE.WebGLRenderer()
-    // this.renderer.setClearColor('#000000', 0 );
+    this.renderer = new THREE.WebGLRenderer( { alpha: true } );
+    this.renderer.setClearColor('#0d1033', 1);
     this.renderer.setSize(width, height)
     this.scene = new THREE.Scene()
     this.camera = new THREE.PerspectiveCamera(
@@ -40,7 +45,7 @@ class ThreeScene extends Component{
     const smokeGeometry = new THREE.PlaneGeometry(300,300)
     this.smokeParticles = []
 
-    for(let p = 0; p < 125; p++){
+    for(let p = 0; p < 105; p++){
         let particle = new THREE.Mesh(smokeGeometry, smokeMaterial)
         particle.position.set(
             Math.random() * 450 - 200,
@@ -77,7 +82,7 @@ animate = () => {
 evolve = () => {
     let sp = this.smokeParticles.length
     while (sp--){
-        this.smokeParticles[sp].rotation.z += (this.delta * 0.35)
+        this.smokeParticles[sp].rotation.z += (this.delta * 0.25)
     }
 }
 renderScene = () => {
@@ -87,7 +92,7 @@ render(){
     return(
       <div
         className="smokeBg"
-        style={this.state && { width: this.state.innerWidth, height: this.state.innerHeight, zIndex: -1 }}
+        style={this.state && { width: this.state.windowWidth, height: this.state.windowHeight, zIndex: -1 }}
         ref={(mount) => { this.mount = mount }}
       />
     )

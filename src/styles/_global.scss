@@ -1,10 +1,11 @@
 @import "../styles/mixins";
 
-$bg: #f8f8f8;
+$bg: #ffffff;
 $text: #1b1717;
 $text2: #868180;
-$key1: #cf9019;
-$key2: #7A392C;
+$text3: #b1abaa;
+$key1: #ec7444;
+$key2: #0d1033;
 
 // $key1: #8e793e;
 // $key2: #ad974f;
@@ -104,7 +105,7 @@ $key2: #7A392C;
 .frame{
   position: relative;
   &:before,&:after{
-    transition: all 0.35s;
+    transition: all 0.25s;
   }
   &:before{
     content: "";

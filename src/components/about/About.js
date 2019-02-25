@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './about.scss'
 import Profile from '../../../static/avatar.jpg'
+import ProfileAlt from '../../../static/avatar_alt.jpg'
 import {SiteConsumer} from '../SiteContext'
 
 const skills = [
@@ -15,17 +16,27 @@ const skills = [
 ]
 
 export default class Content extends Component {
+  state = {
+    hover: false
+  }
+  componentDidMount(){
+    this.setState({
+      hover: false
+    })
+  }
+
   render(){
     return(
       <SiteConsumer>
       {({scroll}) => (
           <section id="about" className='about'>
             <div className='container'>
-              <div className='aboutImage' style={scroll('.aboutImage')}>
+              <div className='aboutImage' style={scroll('.aboutImage')}  onMouseOver={()=>this.setState({hover: true})} onMouseLeave={()=>this.setState({hover: false})}>
                 <div className='img'>
-                  <img src={Profile}/>
+                  <img className='img-norm' src={Profile}/>
+                  <img className='img-alt' style={{opacity: this.state.hover ? 1 : 0}}src={ProfileAlt}/>
                 </div>
-                <p><a href="mailto:lisuy97@gmail.com">lisuy97@gmail.com</a></p>
+                <p><a href="mailto:lisuy97@gmail.com">lisuy97@gmail.com 💬</a></p>
               </div>
               <div className='aboutContent'>
                 <h1>Yes, I design and I code</h1>
@@ -46,7 +57,9 @@ export default class Content extends Component {
                     <div>
                     {
                       skill.content.map((skill, key) => (
-                        <span key={key}>{skill}</span>
+                        <div onClick={() => console.log('hover')} key={key} className='skills-block'>
+                          <span>{skill}</span>
+                        </div>
                       ))
                     }
                     </div>
@@ -56,11 +69,11 @@ export default class Content extends Component {
 
                 <h1>My story</h1>
                 <p>
-                  I started out as a visual designer during the beginning of college. As I learned more in the topics relative to design, I was intrigued by the idea of designing 
-                  solutions for problems through technology, which inspired me to explore the human-centered design and engineering aspect.
+                  I started out as a visual designer in the beginning of college. As I learned more in the topics relative to design, I was intrigued by the idea of designing 
+                  solutions for problems with technology, which inspired me to explore the human-centered design and engineering aspect.
                 </p>
                 <p>
-                  Over the years I find myself enjoy coding more and being able to build out my own designs is fun. I also like to experiment with data-driven projects and break some stuff in the back end. 
+                  Over the years I find myself enjoy coding more and being able to build out my own designs. I also like to experiment with data-driven projects and break some stuff in the back end. 
                   When I am not breaking stuff I like to play games and eat good food :^)
                 </p>
                 <p>
