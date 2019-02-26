@@ -1,8 +1,77 @@
 @import "../../styles/global";
-
+.projHeader2{
+  background-color: $key2;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  .background, .info{
+    width: 50%;
+    height: 100%;
+  }
+  .background{
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+    filter: brightness(55%);
+  }
+  .info{
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 15%;
+    h1,div{
+      padding-left: 35%;
+    }
+    p, h2, h1{
+      margin: 0%;
+    }
+    div{
+      margin-left: 0.5rem;
+      margin-bottom: 1.5%;
+      h2{
+        color: white;
+        font-size: 0.9rem;
+        font-weight: 300;
+        font-family: 'Ubuntu Mono';
+        width: 10%;
+        margin-top: 0.25rem;
+        letter-spacing: 0.1rem;
+      }
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      p{
+        color: $text3;
+        font-size: 0.9rem;
+        line-height: 1.75rem;
+        letter-spacing: 0.1rem;
+        width: 85%;
+      }
+      .overview{
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        margin-top: 2.5%;
+      }
+    }
+    h1{
+      @include bgGrad(90deg, $key1, rgba($key1, 0.25));
+      display: inline-block;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.35rem;
+      font-size: 4.5rem;
+      font-weight: 500;
+      margin-bottom: 5%;
+    }
+  }
+}
 .projHeader{
   position: relative;
-  background-color: white;
+  background-color: $key2;
   .container{
     display: flex;
     flex-direction: row;
