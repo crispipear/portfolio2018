@@ -17,11 +17,11 @@ const skills = [
 
 export default class Content extends Component {
   state = {
-    hover: false
+    profile: ""
   }
   componentDidMount(){
     this.setState({
-      hover: false
+      profile: Profile
     })
   }
 
@@ -32,10 +32,11 @@ export default class Content extends Component {
           <section id="about" className='about'>
             <div className='container'>
               <div className='aboutImage' style={scroll('.aboutImage')}>
-                <div className='img' onMouseOver={()=>this.setState({hover: true})} onMouseLeave={()=>this.setState({hover: false})}>
-                  <img className='img-norm' src={Profile}/>
-                  <img className='img-alt' style={{opacity: this.state.hover ? 1 : 0}}src={ProfileAlt}/>
-                </div>
+                <div className='img' 
+                     onMouseOver={()=>this.setState({profile: ProfileAlt})}
+                     onMouseLeave={()=>this.setState({profile: Profile})}
+                     style={{backgroundImage: `url(${this.state.profile})`}}
+                />
                 <p><a href="mailto:lisuy97@gmail.com">lisuy97@gmail.com 💬</a></p>
               </div>
               <div className='aboutContent'>

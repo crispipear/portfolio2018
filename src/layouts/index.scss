@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
 
 *{
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif, '微软雅黑';
   font-weight: 300;
   color: $text;
   letter-spacing: 0.05rem;
@@ -64,7 +64,7 @@ h1,h2,h3,h4,h5,h6,p{
 
 .footer{
   @extend .clipLeft;
-  animation: clipLeft 0.35s ease-in-out 6s forwards;
+  animation: clipLeft 0.35s ease-in-out 4.5s forwards;
   position: fixed;
   bottom: 3vh;
   right: 3vh;
@@ -117,9 +117,11 @@ h1,h2,h3,h4,h5,h6,p{
   flex-direction: column;
   padding-top: 7.5%;
   h1{
+    color: white;
     font-size: 4rem;
   }
   a{
+    color: white;
     margin-left: -5%;
     font-weight: bold;
     font-size: 1.5rem;

@@ -11,7 +11,7 @@ class Content extends Component{
     }
     componentDidMount(){
       this.setState({
-        image: ProjectsData[0].thumbnail
+        image: ProjectsData[0].header
       })
     }
     _handleHover = src => {
@@ -26,7 +26,7 @@ class Content extends Component{
             {
               ProjectsData.map((project, key) => {
                 return(
-                  <Link key={key} className="proj-div2" to={`/${project.path}`} onMouseOver={() => this._handleHover(project.thumbnail)}>
+                  <Link key={key} className="proj-div2" to={`/${project.path}`} onMouseOver={() => this._handleHover(project.header)}>
                     <h2>0{key+1}</h2>
                     <h1>{project.name}</h1>
                     <h3>{project.type}</h3>

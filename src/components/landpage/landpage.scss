@@ -11,23 +11,23 @@
     font-size: 2.5rem;
     &:first-child{
       @extend .clipDown;
-      animation: clipDown 0.5s ease-in-out 3.25s forwards;
+      animation: clipDown 0.35s ease-in-out 3s forwards;
     }
     &:nth-child(2){
       @extend .clipDown;
-      animation: clipDown 0.5s ease-in-out 3.75s forwards;
+      animation: clipDown 0.35s ease-in-out 3.25s forwards;
     }
   }
   h3{
     font-size: 1.25rem;
     &:nth-child(3){
       @extend .clipUp;
-      animation: clipUp 0.5s ease-in-out 4.25s forwards;
+      animation: clipUp 0.35s ease-in-out 3.75s forwards;
       margin-top: 3.5%;
     }
     &:nth-child(4){
       @extend .clipUp;
-      animation: clipUp 0.5s ease-in-out 4.75s forwards;
+      animation: clipUp 0.35s ease-in-out 4s forwards;
     }
   }
   span{
