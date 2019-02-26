@@ -16,6 +16,7 @@ export default class Content extends Component{
     return (
       <SiteConsumer>
         {({scroll}) => (
+          this.props.project &&
           <section className='projHeader'>
             <div className='explore-more' onClick={() => scrollTo(0, this.state.pos)}>
               <h2>MORE</h2>
