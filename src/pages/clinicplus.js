@@ -114,7 +114,6 @@ const Content = () => (
             between mobile app and the web app, and also build out the mobile app user interface
             with basic functionalities.
           </p>
-          <a className="button" href="http://students.washington.edu/rice74/bis398/wordpress/" target="_blank">PROCESS DOC</a>
         </div>
         <div>
           <h3>reflection</h3>

@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import './work.scss'
-import Background from '../../data/waves/thumbnail.png'
 import Link from 'gatsby-link'
 import ProjectsData from '../../data/projects'
 import Arrow from '../../../static/arrow_light.svg'

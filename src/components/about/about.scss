@@ -1,7 +1,6 @@
 @import "../../styles/global";
 
 .about{
-  background-color: $key2;
   min-height: 100vh;
   height: auto;
   align-items: flex-start;
@@ -77,8 +76,10 @@
     @extend .fadeInBefore;
     animation: fadeIn 0.65s ease-in-out 0.5s forwards;
     text-align: center;
-    @extend .frame;
     .img{
+      width: 100%;
+      height: 100%;
+      @extend .frame;
       img{
         @include box-shadow(5px, 7.5px, 15px, rgba($text, 0.15), false);
         max-width: 100%;
@@ -100,7 +101,7 @@
       color: $text3!important;
       transition: all 0.2s;
       &:hover{
-        opacity: 0.5;
+        color: $key1!important;
       }
     }
   }

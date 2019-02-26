@@ -31,8 +31,8 @@ export default class Content extends Component {
       {({scroll}) => (
           <section id="about" className='about'>
             <div className='container'>
-              <div className='aboutImage' style={scroll('.aboutImage')}  onMouseOver={()=>this.setState({hover: true})} onMouseLeave={()=>this.setState({hover: false})}>
-                <div className='img'>
+              <div className='aboutImage' style={scroll('.aboutImage')}>
+                <div className='img' onMouseOver={()=>this.setState({hover: true})} onMouseLeave={()=>this.setState({hover: false})}>
                   <img className='img-norm' src={Profile}/>
                   <img className='img-alt' style={{opacity: this.state.hover ? 1 : 0}}src={ProfileAlt}/>
                 </div>
@@ -41,7 +41,7 @@ export default class Content extends Component {
               <div className='aboutContent'>
                 <h1>Yes, I design and I code</h1>
                 <p>
-                  I am a <span>Front End Developer</span> and <span>UX Designer</span> based in the Greater Seattle Area. Focused on creating beautiful products, building intuitive user interfaces and designing user experiences that provide efficient
+                  My name is <span>Su Li / 李素莹</span>. I am a <span>Front End Developer</span> and <span>UX Designer</span> based in the Greater Seattle Area. Focused on creating beautiful products, building intuitive user interfaces and designing user experiences that provide efficient
                   human-centered solutions.
                 </p>
                 <p>
@@ -77,7 +77,7 @@ export default class Content extends Component {
                   When I am not breaking stuff I like to play games and eat good food :^)
                 </p>
                 <p>
-                  This site was built with GatsbyJS with a sprinkle of three.js ✨
+                  This site was cooked with GatsbyJS with a dash of three.js ✨
                 </p>
               </div>
             </div>

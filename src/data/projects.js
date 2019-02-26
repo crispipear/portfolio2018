@@ -1,13 +1,12 @@
 import clinic from './clinicplus/thumbnail.png'
 import waves from './waves/thumbnail.png'
 import eatlixir from './eatlixir/thumbnail.png'
-import pockethusky from './pockethusky/thumbnail.png'
 
 
 export default [
    {
      "name": "Clinic+",
-     "type": "mobile application concept",
+     "type": "mobile app - UI/UX, React Native",
      "des": "Optimizes clinic management and improves patient's clinic experience.",
      "path": "clinicplus",
      "tags": ["UI/UX Design", "Product Design", "App Prototype", "React Native", "Express.js"],
@@ -18,7 +17,7 @@ export default [
    },
    {
      "name": "Waves",
-     "type": "mobile application prototype, public installation",
+     "type": "mobile & video prototype - UI/UX, Objective C",
      "des": "Public installation integrated with mobile app bringing awareness to stress.",
      "path": "waves",
      "tags": ["iOS App Prototype", "Objective C", "Video Prototype", "Research"],
@@ -29,7 +28,7 @@ export default [
    },
    {
      "name": "Eatlixir",
-     "type": "web platform",
+     "type": "website - UI/UX, CakePHP",
      "des": "Provides medicinal diet information inspired by Chinese herbology.",
      "path": "eatlixir",
      "tags": ["Web Design", "Web Development", "CakePHP", "Product Design", "Research"],
@@ -38,16 +37,5 @@ export default [
      "thumbnail": eatlixir,
      "overview": "A web platform that provides medicinal diet information based on Chinese herbology. It acts as an alternate dietary resource hope to reduce unhealthy eating habits.",
      "link": "http://students.washington.edu/rice74/IMD351/eatlixir/"
-   },
-   {
-     "name": "Pocket Husky",
-     "type": "mobile application concept",
-     "des": "Engages student interaction and exploration on the UW Bothell campus.",
-     "path": "pockethusky",
-     "tags": ["Mobile App Design", "UI/UX Design", "Product Design", "Research"],
-     "role": ["Web Developer", "UI/UX Designer"],
-     "year": "2017",
-     "thumbnail": pockethusky,
-     "overview": "A mobile application tool to assist students with college resources information. The integrated alternate reality game also engages student interactions and explorations on campus."
    }
 ]
