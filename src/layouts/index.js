@@ -27,8 +27,8 @@ const Layout = ({ children, data }) => (
           title={data.site.siteMetadata.title}
           meta={[
             { name: 'author', content: 'Su Li'},
-            { name: 'description', content: 'Front End Developer and UX Designer from Greater Seattle Area.' },
-            { name: 'keywords', content: 'Su Li, Portfolio, Front End Developer, Web Developer, Design, Design Portfolio, UX Designer' },
+            { name: 'description', content: 'Su Li is a Front End & UX Developer from the Greater Seattle Area, focused on developing efficient, intuitive, and beautiful human-centered products and experiences' },
+            { name: 'keywords', content: 'Su Li, Portfolio, Front End Developer, Web Developer, Design, Design Portfolio, UX Designer, UI Developer, UX Developer, UX Engineer' },
             { name: 'viewport', content: 'width=device-width,initial-scale=1.0'}
           ]}
           link={[
