@@ -1,0 +1,80 @@
+{
+  "assetsByChunkName": {
+    "component---src-pages-work-js": [
+      "component---src-pages-work-js-2b7425a345c29029c40b.js",
+      "component---src-pages-work-js-2b7425a345c29029c40b.js.map"
+    ],
+    "path---waves": [
+      "path---waves-a0e39f21c11f6a62c5ab.js",
+      "path---waves-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---work": [
+      "path---work-a0e39f21c11f6a62c5ab.js",
+      "path---work-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-c08248c539ed352cd473.js",
+      "component---src-pages-index-js-c08248c539ed352cd473.js.map"
+    ],
+    "path---": [
+      "path----dabc12d166b10578744a.js",
+      "path----dabc12d166b10578744a.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-bf90637d7e8a4bf86a6f.js",
+      "component---src-layouts-index-js-bf90637d7e8a4bf86a6f.js.map"
+    ],
+    "path---eatlixir": [
+      "path---eatlixir-a0e39f21c11f6a62c5ab.js",
+      "path---eatlixir-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---index": [
+      "path---index-a0e39f21c11f6a62c5ab.js",
+      "path---index-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-waves-js": [
+      "component---src-pages-waves-js-25ae70ac2bfb00cd4a70.js",
+      "component---src-pages-waves-js-25ae70ac2bfb00cd4a70.js.map"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-6ce90184693dc99485d9.js",
+      "component---src-pages-404-js-6ce90184693dc99485d9.js.map"
+    ],
+    "commons": [
+      "commons-62475adce1fe8867f111.js",
+      "commons-62475adce1fe8867f111.js.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "app": [
+      "app-841d9a80fdec247d7a3f.js",
+      "app-841d9a80fdec247d7a3f.js.map"
+    ],
+    "path---clinicplus": [
+      "path---clinicplus-a0e39f21c11f6a62c5ab.js",
+      "path---clinicplus-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-eatlixir-js": [
+      "component---src-pages-eatlixir-js-0339519f969b4ab05e89.js",
+      "component---src-pages-eatlixir-js-0339519f969b4ab05e89.js.map"
+    ],
+    "component---src-pages-about-js": [
+      "component---src-pages-about-js-682cf4b1a1c5a9bcec54.js",
+      "component---src-pages-about-js-682cf4b1a1c5a9bcec54.js.map"
+    ],
+    "component---src-pages-clinicplus-js": [
+      "component---src-pages-clinicplus-js-a5b6a89587acd33705bd.js",
+      "component---src-pages-clinicplus-js-a5b6a89587acd33705bd.js.map"
+    ],
+    "path---about": [
+      "path---about-a0e39f21c11f6a62c5ab.js",
+      "path---about-a0e39f21c11f6a62c5ab.js.map"
+    ]
+  }
+}

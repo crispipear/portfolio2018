@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{86:function(t,e){t.exports={data:{site:{siteMetadata:{title:"Su Li Portfolio — Front End & UX Developer"}}},layoutContext:{}}}});
+//# sourceMappingURL=path----dabc12d166b10578744a.js.map
